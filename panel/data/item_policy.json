@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "name": "SBCheatGUI Item Policy Database",
+  "description": "Central safety policy for the Qt Item Add Center. Live Add is foregrounded for guarded stack categories; Save Backup edits existing count-backed save records.",
+  "safe_stack_categories": [
+    "Usable",
+    "Ammo",
+    "Fish",
+    "Material"
+  ],
+  "live_stack_categories": [
+    "Usable",
+    "Ammo",
+    "Fish"
+  ],
+  "singleton_categories": [
+    "Gear",
+    "Design",
+    "Core",
+    "Equipment"
+  ],
+  "blocked_aliases": [
+    "bodycore",
+    "betacore",
+    "alphacore",
+    "item_betacore",
+    "item_alphacore"
+  ],
+  "blocked_prefixes": [
+    "quest_",
+    "mission_"
+  ],
+  "blocked_categories": [
+    "Mission"
+  ],
+  "wallet_patterns": [
+    "gold",
+    "coin",
+    "currency",
+    "omnibolt",
+    "omni.?bolt",
+    "vending",
+    "betacrystal"
+  ],
+  "non_stack_save_alias_patterns": [
+    "^can_\\d+",
+    "^designpattern_",
+    "^bs_",
+    "^hair_",
+    "adamcostume",
+    "lilycostume",
+    "droneseal"
+  ],
+  "levels": {
+    "SAFE": "Safe backup-save target",
+    "SAVE_ONLY": "Likely safe if already in save",
+    "CAUTION": "Caution backup-save target",
+    "BLOCKED": "Blocked",
+    "MISSING": "Missing from current save",
+    "NO_COUNT": "No writable count",
+    "UNKNOWN": "Validate first"
+  },
+  "aliases": {
+    "Item_Gold": {
+      "level": "CAUTION",
+      "text": "Save-only caution",
+      "detail": "Gold maps through wallet-style save data. Validate and use Save Backup reports; Live Add stays blocked for wallet routes.",
+      "save_supported": true,
+      "live_supported": false
+    },
+    "Item_Gold+": {
+      "level": "CAUTION",
+      "text": "Save-only caution",
+      "detail": "Gold Pack maps through wallet-style save data. Validate and use Save Backup reports; Live Add stays blocked for wallet routes.",
+      "save_supported": true,
+      "live_supported": false
+    },
+    "Item_Gold++": {
+      "level": "CAUTION",
+      "text": "Save-only caution",
+      "detail": "Gold Pack (Large) maps through wallet-style save data. Validate and use Save Backup reports; Live Add stays blocked for wallet routes.",
+      "save_supported": true,
+      "live_supported": false
+    },
+    "GearCore": {
+      "level": "CAUTION",
+      "text": "Caution / core record",
+      "detail": "Gear Core can appear as a counted save record, but it is progression-adjacent. Validate before editing.",
+      "save_supported": true,
+      "live_supported": false
+    },
+    "BodyCore": {
+      "level": "BLOCKED",
+      "text": "Blocked",
+      "detail": "Body Core is progression-sensitive and is blocked from duplication.",
+      "save_supported": false,
+      "live_supported": false
+    },
+    "BetaCore": {
+      "level": "BLOCKED",
+      "text": "Blocked",
+      "detail": "Beta Core is progression-sensitive and is blocked from duplication.",
+      "save_supported": false,
+      "live_supported": false
+    },
+    "AlphaCore": {
+      "level": "BLOCKED",
+      "text": "Blocked",
+      "detail": "Alpha Core is progression-sensitive and is blocked from duplication.",
+      "save_supported": false,
+      "live_supported": false
+    }
+  }
+}

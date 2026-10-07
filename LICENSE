@@ -1,0 +1,28 @@
+STELLAR BLADE CONTROL PANEL SOURCE REVIEW LICENSE
+
+Copyright (c) 2026 Rynstreme. All rights reserved.
+
+The source code, artwork, documentation, and other original material in this
+repository are made publicly visible so that Nexus Mods staff, security
+researchers, and users can inspect the source corresponding to the submitted
+binary release and can reproduce a build for verification.
+
+Permission is granted to download, inspect, and compile the material solely for
+personal security review, compatibility testing, and verification of the
+associated Nexus Mods submission.
+
+No permission is granted to redistribute the source or compiled builds, publish
+modified versions, incorporate the material into another project, sell it,
+relicense it, remove attribution, or represent it as another person's work.
+Any use beyond the limited review permission above requires prior written
+permission from the copyright holder.
+
+Third-party components remain under their respective licenses. This license
+does not claim ownership of Stellar Blade, UE4SS, Qt/PySide6, PyInstaller,
+PresentMon, or any other third-party property.
+
+THE MATERIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE
+MATERIAL OR ITS USE.

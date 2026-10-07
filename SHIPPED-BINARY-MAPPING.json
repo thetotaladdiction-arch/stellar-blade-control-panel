@@ -1,0 +1,40 @@
+{
+  "binaries_not_included": true,
+  "nexus_upload_id": 17076,
+  "files": [
+    {
+      "name": "Release ZIP2.6.11 / Nexus upload17076",
+      "sha256": "C864702FEF397983F7B32CE3D6C312FD82C17683D34B0693776B9742BF843FD9",
+      "bytes": 74450993
+    },
+    {
+      "name": "Stellar Blade Control Panel.exe",
+      "sha256": "F0B190C525B1D0DA62AC158A943D1AECDAF6346388F8AD51514761AF95043E79",
+      "bytes": 65990219
+    },
+    {
+      "name": "SBGodNative",
+      "version": "1.3.5",
+      "sha256": "F3B0E52A114018C18DE37E7F56D530E277B11FDB44ABDA2C29429F93473C2643",
+      "bytes": 157696
+    },
+    {
+      "name": "SBLiveAddNative",
+      "version": "0.5.1",
+      "sha256": "3DF532FEDF404C86378592CCDEAF1B8E9E2C0AC2E5CFBF8A05BF195FDEC197CF",
+      "bytes": 226816
+    },
+    {
+      "name": "SBMovementNative",
+      "version": "1.4.1",
+      "sha256": "2EC681952F6F737951816C59E41769D235C478B0E50F980548015E893166B88C",
+      "bytes": 89088
+    },
+    {
+      "name": "SBRetryPointNative",
+      "version": "0.2.3",
+      "sha256": "360877DA3E235F0AAE0C9059404B1E5F19EBBE9A4FCFB6254D6AC4FE7365FDAB",
+      "bytes": 113664
+    }
+  ]
+}

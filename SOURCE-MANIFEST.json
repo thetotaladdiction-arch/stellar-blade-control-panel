@@ -1,0 +1,1242 @@
+{
+  "purpose": "Nexus source review upload17076",
+  "snapshot_version": "2.6.11",
+  "source_url": "https://github.com/thetotaladdiction-arch/stellar-blade-control-panel/tree/v2.6.11",
+  "files": [
+    {
+      "path": "BUILD.md",
+      "sha256": "3F82FBDE2A582E77766ECA5E333396F90E4F714E639C66AF117AC6A12F4930B9",
+      "bytes": 4623
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "490E10F3B97B3C5A5CF3418205234948A53EB348FE833EAA5D1FA2279E210C45",
+      "bytes": 1449
+    },
+    {
+      "path": "LICENSES/GPL-3.0.txt",
+      "sha256": "8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903",
+      "bytes": 35147
+    },
+    {
+      "path": "LICENSES/libffi-MIT.txt",
+      "sha256": "D5699FA516968E3A1550E6C902B7441C78856F2603D61BEDD0B0662A26655366",
+      "bytes": 1132
+    },
+    {
+      "path": "LICENSES/Mesa-MIT.txt",
+      "sha256": "2D00F511D9E925DB292B6400F28E5A781618B8FBAE30AFF12CAA594A6982979A",
+      "bytes": 1260
+    },
+    {
+      "path": "LICENSES/OpenSSL-Apache-2.0.txt",
+      "sha256": "7D5450CB2D142651B8AFA315B5F238EFC805DAD827D91BA367D8516BC9D49E7A",
+      "bytes": 10175
+    },
+    {
+      "path": "LICENSES/PyInstaller-COPYING.txt",
+      "sha256": "DCF75FDB959DB1E3B41C0F8505069D2ECE781B5EC6B3D0A4D30975CFC6580245",
+      "bytes": 32138
+    },
+    {
+      "path": "LICENSES/Python-PSF-2.0.txt",
+      "sha256": "935CF13E19F8C31B497D20B05D73623431A226B230C3599BC30FA3348979BC68",
+      "bytes": 35407
+    },
+    {
+      "path": "LICENSES/Qt-LGPL-3.0.txt",
+      "sha256": "A853C2FFEC17057872340EEE242AE4D96CBF2B520AE27D903E1B2FEF1A5F9D1C",
+      "bytes": 7639
+    },
+    {
+      "path": "LICENSES/Qt-third-party.txt",
+      "sha256": "621EEFA96E7A0772E502100F6703C4416EC4D2EF91B195DE1859F42CF383E099",
+      "bytes": 332851
+    },
+    {
+      "path": "LICENSES/RE-UE4SS-MIT.txt",
+      "sha256": "99E1D8F8B7CB68E8B2313380AE3B0C8115E39DFBC443FCF21FD67AB74CE1D57E",
+      "bytes": 1085
+    },
+    {
+      "path": "lua/SBInstantBossRestart/main.lua",
+      "sha256": "98F735E2CAABE30E5C01EE31A167648143106F03EA22F9371CF3912E6763B164",
+      "bytes": 189911
+    },
+    {
+      "path": "lua/SBLiveAddBridge/main.lua",
+      "sha256": "B8C9F17BB6130DC12B6E94D70BAACA44239F7436AACA678CC46617DE09C127FF",
+      "bytes": 60402
+    },
+    {
+      "path": "native/CMakeLists.txt",
+      "sha256": "7E0588914010780DE4740DEC422ADFCF8722455D1908D20BE585F43830552668",
+      "bytes": 1865
+    },
+    {
+      "path": "native/god/CMakeLists.txt",
+      "sha256": "9D9678F6EA3517660B22B29AA3C4D3BDD7956745C2D0D6352F6844C6F8B6A7AE",
+      "bytes": 8521
+    },
+    {
+      "path": "native/god/dllmain.cpp",
+      "sha256": "3C3C9C6EB36915E091F1394F1906CC5BA3082E6138897275A09D1508A622C460",
+      "bytes": 1767
+    },
+    {
+      "path": "native/god/god_gate.cpp",
+      "sha256": "57117C271722A9C7E8D3DE856CAD230763E6ACFBA2BFD9173F918C9A74AFDFDC",
+      "bytes": 10895
+    },
+    {
+      "path": "native/god/god_gate.hpp",
+      "sha256": "A0B3C0AEE1B730BE914A3AB7C2B8C041DC6A1DDFD888AE28FBF9D71B88C02DD5",
+      "bytes": 2543
+    },
+    {
+      "path": "native/god/god_hook.cpp",
+      "sha256": "1AFDA703CBDD852DF7AFF8766263CF51B9830817826D08B1D50ED6B092A41F75",
+      "bytes": 239222
+    },
+    {
+      "path": "native/god/god_hook.hpp",
+      "sha256": "612F416D02AFACCD82E68B057BB90C4EF2008A02FC4C3EF907E8F9D275819591",
+      "bytes": 2304
+    },
+    {
+      "path": "native/god/god_identity.cpp",
+      "sha256": "FFF92F3ACEE4C8E5E4D44E6C9828DA77266F78589522345CACE7AC409DBBAC28",
+      "bytes": 29882
+    },
+    {
+      "path": "native/god/god_identity.hpp",
+      "sha256": "FA93975D0295668CECD08BAAF4B267767FF6D55ECEC4E11A9E31F1A8CB5BB1A1",
+      "bytes": 26890
+    },
+    {
+      "path": "native/god/god_sites.cpp",
+      "sha256": "6E7EFD20E1FCE6EF56734EDE8EDF12A9BEA030862A107DF6015215575425AFE6",
+      "bytes": 35177
+    },
+    {
+      "path": "native/god/god_sites.hpp",
+      "sha256": "BC8FE6C9BDB85DF2719A9D6D31EE644A6D63C3DAE571ED6361CB1717BFCE92F4",
+      "bytes": 10560
+    },
+    {
+      "path": "native/god/god_state.cpp",
+      "sha256": "0030D81FE273795EB831BBB4B26369DC4E3023CA3D11014D8FCEE4797800BFE8",
+      "bytes": 2515
+    },
+    {
+      "path": "native/god/god_state.hpp",
+      "sha256": "721BA501921E97EC4623A9C4E225B82108A990179BCD3FF0AE464C25E22D2CFC",
+      "bytes": 1373
+    },
+    {
+      "path": "native/god/ue4ss_minimal.hpp",
+      "sha256": "1B52C2FE3147A11F203976D0C91A47597F4F4127E50B679A3C9714711AD37630",
+      "bytes": 970
+    },
+    {
+      "path": "native/liveadd/CMakeLists.txt",
+      "sha256": "192F1026A9CA138BF15BFBDDDBE3BECA44CE003E638C9DFDA3F8AAD7220B1D99",
+      "bytes": 2772
+    },
+    {
+      "path": "native/liveadd/dllmain.cpp",
+      "sha256": "8C4EDA6E886AF71B76CFBF0B4B574A441BB3B484551056533DC3895EB2968839",
+      "bytes": 1845
+    },
+    {
+      "path": "native/liveadd/live_add.cpp",
+      "sha256": "5B464453C23DDC5056E57CADCB3D4E6B912B08ECA5F1EDAB6CEDDA9E5D987894",
+      "bytes": 382783
+    },
+    {
+      "path": "native/liveadd/live_add.hpp",
+      "sha256": "B62C05C356DCA1331E5F8E4631E44AC304B355846FC8C272CD6D7ACA2A9FED3D",
+      "bytes": 134
+    },
+    {
+      "path": "native/movement/CMakeLists.txt",
+      "sha256": "24E1D7057C5C6D7C3976D6E44ECDB7770942977EB096B481D76D71114F95E9B5",
+      "bytes": 4456
+    },
+    {
+      "path": "native/movement/SBCORE_PIN.txt",
+      "sha256": "B538B7CFC57D918FB5E5F9D77CE859BA1EEF18E90064A8A16736EE3A2ADC274A",
+      "bytes": 76
+    },
+    {
+      "path": "native/movement/src/dllmain.cpp",
+      "sha256": "C8769567C3021F6005A7884E2C9F2DF30D29E54211E4DD144A73C956F4E4AE2A",
+      "bytes": 1935
+    },
+    {
+      "path": "native/movement/src/movement.cpp",
+      "sha256": "BD345E752536C7559790462622BF1F5137CCCB3ED993BA2ED4375AA65BE01F7C",
+      "bytes": 57666
+    },
+    {
+      "path": "native/movement/src/movement.hpp",
+      "sha256": "8B1FF70C41F07739877877C0DD090BB2F83E56194F1A2A73AFB649C99815F46B",
+      "bytes": 958
+    },
+    {
+      "path": "native/movement/src/ue4ss_minimal.hpp",
+      "sha256": "5758DFBDF52F884ACEF8CEA7BFFF0F9F57742FFA811DCFD39C433A9C1F1ADDD2",
+      "bytes": 778
+    },
+    {
+      "path": "native/movement/tools/check_pe.py",
+      "sha256": "EC8501C2290C90C374DB734BA32FD78A51307EF8D455D63D115C42158A2486B6",
+      "bytes": 4807
+    },
+    {
+      "path": "native/movement/tools/check_sbcore_pin.py",
+      "sha256": "AD1BF718CDDD9D5B0F921A6C8640ECE2862D643DB24816F65F09B77F90B24A97",
+      "bytes": 1601
+    },
+    {
+      "path": "native/retry/CMakeLists.txt",
+      "sha256": "011D9BA8DAD2640D7B93580D6659F0AAC32F4F4C069A7BD749C9810332F21718",
+      "bytes": 4291
+    },
+    {
+      "path": "native/retry/dllmain.cpp",
+      "sha256": "A3D9D45AB03C923D149F53B6C2B7DAA3BB355327D0960D30A051E0FDBAB077E9",
+      "bytes": 1483
+    },
+    {
+      "path": "native/retry/retry_point.cpp",
+      "sha256": "7A6C40E48C3D596821FA8A32EB12FC42F9088AE938D2558C32333F9F35CA0A2A",
+      "bytes": 77823
+    },
+    {
+      "path": "native/retry/retry_point.hpp",
+      "sha256": "EA4AC31AE58162B65B408042067938EE21BB68D9D369C080753F3229E4DAFEB3",
+      "bytes": 771
+    },
+    {
+      "path": "native/retry/ue4ss/UE4SS.def",
+      "sha256": "2996DEC3C644B2D2AEFAF661C28E83F7EE78EBFA53E22DF039EBBBD8ED6B7B82",
+      "bytes": 533
+    },
+    {
+      "path": "native/retry/ue4ss_minimal.hpp",
+      "sha256": "868774C63E6829CF4F25B0140E656F6A2448F355D82331D7B6BB6A66603E31F1",
+      "bytes": 1318
+    },
+    {
+      "path": "native/sbcore/cmake/sbcore_preset.cmake",
+      "sha256": "CA1973236DD09E0938CF636B25D7313B3F6A06E257177240F870F6F13AC9B4DB",
+      "bytes": 2340
+    },
+    {
+      "path": "native/sbcore/CMakeLists.txt",
+      "sha256": "E4C19520F174C4850F89F72644C692B69A514D26F8B1BBB1F32B08184233415D",
+      "bytes": 5642
+    },
+    {
+      "path": "native/sbcore/include/sbcore/build_target.hpp",
+      "sha256": "5732A2CC3243B93D87101D840CFF420DA8E57B585BD3BF1C8C2C013EF96B54D0",
+      "bytes": 1270
+    },
+    {
+      "path": "native/sbcore/include/sbcore/dispatch.hpp",
+      "sha256": "8C67D7F0EE17C7695032CDC37285DB3085D6566764CB04EC114F9A4D2F6B7E18",
+      "bytes": 4748
+    },
+    {
+      "path": "native/sbcore/include/sbcore/exe_identity.hpp",
+      "sha256": "5C5B789417469D32A972EBE21119E10F0357D2274013CB8105A576324A4FEE73",
+      "bytes": 1611
+    },
+    {
+      "path": "native/sbcore/include/sbcore/fault.hpp",
+      "sha256": "0AA0B6DFAB83E85FB114C3BF8FAF2B2EDB88E0DBB08F05F241B5CE38CB3F73DB",
+      "bytes": 4873
+    },
+    {
+      "path": "native/sbcore/include/sbcore/gate.hpp",
+      "sha256": "6F655EBC64150844BB690B4E8052C9A03B15E321EEC941D9DD6D82235EFEEECA",
+      "bytes": 3630
+    },
+    {
+      "path": "native/sbcore/include/sbcore/lease.hpp",
+      "sha256": "85AE80989FF89B52ECFBC40E1B7CE2A60D1FF677BBC552E6AEBB683DB83CED07",
+      "bytes": 1156
+    },
+    {
+      "path": "native/sbcore/include/sbcore/manifest.hpp",
+      "sha256": "4480552304A92F45A48922BD20FCC944045AA8C2D8B347C1286373737341F260",
+      "bytes": 2810
+    },
+    {
+      "path": "native/sbcore/include/sbcore/memory.hpp",
+      "sha256": "9951A6142A4A0181CEF75B3339A513CD2D5309912A6B018C6977A9E414F8C025",
+      "bytes": 1125
+    },
+    {
+      "path": "native/sbcore/include/sbcore/module.hpp",
+      "sha256": "296105D50D4BC5F8A754783D62D426C382FF1C89CB8AB49196313108F045EC78",
+      "bytes": 556
+    },
+    {
+      "path": "native/sbcore/include/sbcore/paths.hpp",
+      "sha256": "434754BCC7ECAE1E222F7F959D50E7C4D8C371E96DC5CA586BF9DDD5D9AE1E6F",
+      "bytes": 2129
+    },
+    {
+      "path": "native/sbcore/include/sbcore/sbcore.hpp",
+      "sha256": "D7606F9C2E9F88F86D41C8DCB35A74A0E26B6B3ACD76CB7F2F247AB7EA82ECA7",
+      "bytes": 447
+    },
+    {
+      "path": "native/sbcore/include/sbcore/status.hpp",
+      "sha256": "741FC4B8411ABE98F0D832CDBD081B0CAA16820C76F7E0E24D862FB787B30209",
+      "bytes": 10401
+    },
+    {
+      "path": "native/sbcore/include/sbcore/taskgraph_manifest.generated.hpp",
+      "sha256": "852F2F702D37D6077D68D80AD6792F4049B53D36184F65B98FAA3E294E80CFCE",
+      "bytes": 8158
+    },
+    {
+      "path": "native/sbcore/include/sbcore/version.hpp",
+      "sha256": "F26A9137307C8BB18695304F49761650A89240F4F251A63E65D2090D99176F61",
+      "bytes": 134
+    },
+    {
+      "path": "native/sbcore/shim_include/Mod/CppUserModBase.hpp",
+      "sha256": "1C058EFD29872CD317D7099ABBC9C194FBE09BA5D2AC4DBA089EF9524B2FEA2C",
+      "bytes": 5074
+    },
+    {
+      "path": "native/sbcore/src/dispatch.cpp",
+      "sha256": "053AE9AD11E1557B0DD5D13AB781F63F52A7B7ADAE987FA9C01D920D9838233D",
+      "bytes": 15515
+    },
+    {
+      "path": "native/sbcore/src/exe_identity.cpp",
+      "sha256": "BCF2A521F30ECAEE60C9088D2B31AC6CA3AF8C2C840E91984212E9E637397AFE",
+      "bytes": 7958
+    },
+    {
+      "path": "native/sbcore/src/fault.cpp",
+      "sha256": "C56DD8471CAD653AB439E95EFD73EC8CCBA8385DFE19994268EF3A2F23AD9171",
+      "bytes": 18700
+    },
+    {
+      "path": "native/sbcore/src/gate.cpp",
+      "sha256": "1FC07EE43E98DDD94165D69BCC7560A7E1DC6FA4FE8E0105431106C78E1C1DDD",
+      "bytes": 15960
+    },
+    {
+      "path": "native/sbcore/src/lease.cpp",
+      "sha256": "26BA139B3A15114EB6FB78FF257796FC291E2A12F0CA4C8C189C990A9206BDD0",
+      "bytes": 2219
+    },
+    {
+      "path": "native/sbcore/src/memory.cpp",
+      "sha256": "2F806A2DA00EEDDC1BC430222CCB1E1B189BC6341AC34433A8C81206E8E77471",
+      "bytes": 2134
+    },
+    {
+      "path": "native/sbcore/src/module.cpp",
+      "sha256": "F43EB991CAAF7BFCE4B8BDC2BCCE2E471595938DA73E0C9F2A44D80D176B820E",
+      "bytes": 1057
+    },
+    {
+      "path": "native/sbcore/src/paths.cpp",
+      "sha256": "9C2ABB0C758394DF570B157CEE054741F5B2C0C7C39AE0C81D6D4B93845978DD",
+      "bytes": 4150
+    },
+    {
+      "path": "native/sbcore/src/status.cpp",
+      "sha256": "6A8F30462B62F9B83DF0A35FCFE04230D01699637AB0B121B1658808F5DEA117",
+      "bytes": 25186
+    },
+    {
+      "path": "native/sbcore/third_party/RE-UE4SS/d3d10044d1/CppUserModBase.hpp",
+      "sha256": "3D4BDDC73B0F126830D16D2FE2E5C924447708FF9B41D56DCE8FDE795BDA58F9",
+      "bytes": 6119
+    },
+    {
+      "path": "native/sbcore/third_party/RE-UE4SS/d3d10044d1/StringType.hpp",
+      "sha256": "4F2393D544C37A79F8BB3F3BD8B8DE21EF5D55F02697BE0E4B5A93699CE7125C",
+      "bytes": 1662
+    },
+    {
+      "path": "native/sbcore/third_party/RE-UE4SS/LICENSE",
+      "sha256": "99E1D8F8B7CB68E8B2313380AE3B0C8115E39DFBC443FCF21FD67AB74CE1D57E",
+      "bytes": 1085
+    },
+    {
+      "path": "native/sbcore/tools/check_no_hardcoded_paths.py",
+      "sha256": "5AAA5F3CAC53E6BDDE44D26CC05E09BEC2EEEA10423921D4296F6B1B102E5A2B",
+      "bytes": 1245
+    },
+    {
+      "path": "native/sbcore/tools/check_vtable_order.py",
+      "sha256": "90299A6F7070E12E5D8590A51D9E9E562AD885E23461EB448B783C953CD3B029",
+      "bytes": 11018
+    },
+    {
+      "path": "native/sbcore/ue4ss/runtime_vtable_d3d10044d1.txt",
+      "sha256": "546849039581C53CC24377C75711348A7645DAEF528672BB0A8A83AE56856D55",
+      "bytes": 610
+    },
+    {
+      "path": "native/sbcore/ue4ss/UE4SS.def",
+      "sha256": "CE7E41852E11C4DC8C0DCE996A353EB02B4AEF48C74AF025DE9E7E50B6AF2649",
+      "bytes": 397
+    },
+    {
+      "path": "panel/assets/eve-mod-icon-256.png",
+      "sha256": "005292616A373E411E2511CF7F741A8868CE6C79490E5F51A9563B4B2D1F3E41",
+      "bytes": 107900
+    },
+    {
+      "path": "panel/data/item_catalog_v05.json",
+      "sha256": "31C1420BD346F81DAF2F56F772C690C39B6FE4A09CFB59A6CFB7BFBAC61D0CE5",
+      "bytes": 259497
+    },
+    {
+      "path": "panel/data/item_policy.json",
+      "sha256": "4C454FC8DD43825D2ED99E78A02498CBC577D7C5C09580CD7F7DB6370566BAF6",
+      "bytes": 3150
+    },
+    {
+      "path": "panel/eve.ico",
+      "sha256": "89F00166AA9B24B5CD7BA27BC35EDE4CC3E30DE463FD841DFA4EBA2275B2736F",
+      "bytes": 166864
+    },
+    {
+      "path": "panel/QtPanel/components/AnimatedPageHost.qml",
+      "sha256": "5A364C998A25436722FD3D3AFE2E066C52EAF4DC5A6EE95961AF3D7248262732",
+      "bytes": 6182
+    },
+    {
+      "path": "panel/QtPanel/components/BrandImage.qml",
+      "sha256": "1CBDF7A4A92C4F745B7A4FDE121ACBC3D40FEB308F3045790A50C356C40DF096",
+      "bytes": 1500
+    },
+    {
+      "path": "panel/QtPanel/components/BrandMark.qml",
+      "sha256": "670F3A465E6A93784CC793FB9A0309F63D0FD4B0DCCE1A27459C65A912D3C7C2",
+      "bytes": 1273
+    },
+    {
+      "path": "panel/QtPanel/components/ButtonRow.qml",
+      "sha256": "81E7A2952670AEE84476EBEEDB4CCD9BCBAC971ED3419039DC5DEAD5AB6538C8",
+      "bytes": 1941
+    },
+    {
+      "path": "panel/QtPanel/components/ChevronIndicator.qml",
+      "sha256": "840469B6ADDB95114181CB8F5A8BDA8CA152AEEDEE7BFDCB9CB0022FFC16B515",
+      "bytes": 1603
+    },
+    {
+      "path": "panel/QtPanel/components/CollapsibleSection.qml",
+      "sha256": "3C2EFCC76329C703FC4DCBE33ED4A2F0BEB56FDA9747DD19A69259ECB5869CDF",
+      "bytes": 203
+    },
+    {
+      "path": "panel/QtPanel/components/Disclosure.qml",
+      "sha256": "DA7B2D9FAEF20965569BA6FCBF60A44596D46FDE9BE42550408D54393A214A4A",
+      "bytes": 6164
+    },
+    {
+      "path": "panel/QtPanel/components/DockSelect.qml",
+      "sha256": "1B59331DFC4D01C7D0135D41D1A857C3E114D0BDFDFC94E8FC53A37C19A514D4",
+      "bytes": 1311
+    },
+    {
+      "path": "panel/QtPanel/components/EmptyState.qml",
+      "sha256": "378DB588813CA3B5D489DA83545660691473CA4C483EF3A3D675FA71DDACDB9F",
+      "bytes": 1854
+    },
+    {
+      "path": "panel/QtPanel/components/EnergySection.qml",
+      "sha256": "7885C1359B1D61876C5C7296CE26300110FF5CE4B9D1DFF6703FD403D26523C3",
+      "bytes": 3488
+    },
+    {
+      "path": "panel/QtPanel/components/EveSceneBackdrop.qml",
+      "sha256": "BAB4200A5CFC0A5D3AB417C7787EF5A564110D158E33E138DDAF9B62EEE990FC",
+      "bytes": 4380
+    },
+    {
+      "path": "panel/QtPanel/components/FieldFrame.qml",
+      "sha256": "E1ED70BA3859DED77136F8315C2A1D8C5EA94C466D037415EB52D0DB1D9825D3",
+      "bytes": 2101
+    },
+    {
+      "path": "panel/QtPanel/components/FixedScrollBox.qml",
+      "sha256": "AD48ADB85349E8D957FFDC4FEF7645AFBAF5212A04C2C97DDFF28660B8A4195F",
+      "bytes": 1579
+    },
+    {
+      "path": "panel/QtPanel/components/FriendlyNote.qml",
+      "sha256": "923A2FC1E985B4E3DF989A577517D6C9F65D2AF12C8DA0E0B0FC3377E1A5B74E",
+      "bytes": 3095
+    },
+    {
+      "path": "panel/QtPanel/components/GlassSurface.qml",
+      "sha256": "894C92CFC9DD2CBBC8FB3801B55A782BF4975B2CB7DCC98413B074C9F3F76659",
+      "bytes": 3864
+    },
+    {
+      "path": "panel/QtPanel/components/GodModeSection.qml",
+      "sha256": "CDC3D34B94691DDCF3DA1997DACDD467B5BE46FB063EC7BD76D62289C4E70E00",
+      "bytes": 4077
+    },
+    {
+      "path": "panel/QtPanel/components/HelpTip.qml",
+      "sha256": "619E400E2F94594CCDE141CE8B6C3D51350237851D751414EBA7997C72897999",
+      "bytes": 2027
+    },
+    {
+      "path": "panel/QtPanel/components/ItemCatalogList.qml",
+      "sha256": "9D1E0BA537B170271EC3CB0A259AF4E325805C3F642DC22795632E860FBF9A5C",
+      "bytes": 16843
+    },
+    {
+      "path": "panel/QtPanel/components/LogScrollBox.qml",
+      "sha256": "5F670A8CD42BCD1A73051CD268814A1E54EBF446D353F5A2C738085A424B9B92",
+      "bytes": 1480
+    },
+    {
+      "path": "panel/QtPanel/components/NavGlyph.qml",
+      "sha256": "68D7084A6C95815FDF2550354822D4CA567BC2CBF1CAD91535B2A3DC07E5AAF6",
+      "bytes": 584
+    },
+    {
+      "path": "panel/QtPanel/components/NavItem.qml",
+      "sha256": "D8D3DE1BFEA0BF081749BC01CB7E0E089D30A5EC79E9BF780270CC9D540724D6",
+      "bytes": 5111
+    },
+    {
+      "path": "panel/QtPanel/components/NeonSectionTitle.qml",
+      "sha256": "98A103E47F0B3AF14FCC6426DB3A8FFD6096AFAB85F2EDDA03DAE25DFDF67622",
+      "bytes": 7143
+    },
+    {
+      "path": "panel/QtPanel/components/NotchFrame.qml",
+      "sha256": "60AFE4B797752F87D0C351445DA70D716710886E31BB6B9B6EA9FBA82F1F9B6E",
+      "bytes": 3377
+    },
+    {
+      "path": "panel/QtPanel/components/PageScroll.qml",
+      "sha256": "0CDF2170242B20850EC5082ABC0756881BB9F1B9720E3DE3CC0D7662809F0B21",
+      "bytes": 5438
+    },
+    {
+      "path": "panel/QtPanel/components/PanelScrollBar.qml",
+      "sha256": "3BEC2BF630E5B573C54C49143044FD548FDBAEDD36939956EC0EFAB58D9E1203",
+      "bytes": 3458
+    },
+    {
+      "path": "panel/QtPanel/components/PerformanceOverlay.qml",
+      "sha256": "38292CDEC2147C0F71C7212609FDCE81EB3D31E103DA7E8251FF350454215960",
+      "bytes": 20825
+    },
+    {
+      "path": "panel/QtPanel/components/SbButton.qml",
+      "sha256": "F1373E06CF75EDA2B79F487A1B72B251244ECFBD3107DF44D796D92AD5CCAD9E",
+      "bytes": 9767
+    },
+    {
+      "path": "panel/QtPanel/components/SbCard.qml",
+      "sha256": "45A0721D8E112891A470297A630E3284F73C87B2D58ACB40600ED5E4A1FF07A3",
+      "bytes": 6030
+    },
+    {
+      "path": "panel/QtPanel/components/SbCheckBox.qml",
+      "sha256": "0084B4A6FC108DE83199B5A341838B0174569FCE0322C3B0E4F63A79B70BEE8A",
+      "bytes": 2472
+    },
+    {
+      "path": "panel/QtPanel/components/SbComboBox.qml",
+      "sha256": "AF27D2E3AD518B3027F9DFDD8E5DB50905B3C19708FEE111C39730D01BBF7BC0",
+      "bytes": 7291
+    },
+    {
+      "path": "panel/QtPanel/components/SbDialog.qml",
+      "sha256": "A3EE01EB7CA328998948EC4A86117E006C3EBE5BA8C30627162C8DD7F50CCE5B",
+      "bytes": 5889
+    },
+    {
+      "path": "panel/QtPanel/components/SbIcon.qml",
+      "sha256": "630EC7F55DE06BE7345AB05CA052FA2D1E07828005780DB16536FEDE92B25214",
+      "bytes": 1327
+    },
+    {
+      "path": "panel/QtPanel/components/SbMenu.qml",
+      "sha256": "AFBDF036B97936300D2EAF44D22F9AFDF82095737DBFBD40A1365BACAC09CF56",
+      "bytes": 2894
+    },
+    {
+      "path": "panel/QtPanel/components/SbMenuItem.qml",
+      "sha256": "7049D9E052681A788DC9FD2A5279280F90A9541E4870CA292D28FCEF9DCBF3B3",
+      "bytes": 3410
+    },
+    {
+      "path": "panel/QtPanel/components/SbMenuSeparator.qml",
+      "sha256": "B7B010F2FDBE9F7968E02E113758E2237F64502EDE925EE730FF21FF70F81F5F",
+      "bytes": 500
+    },
+    {
+      "path": "panel/QtPanel/components/SbSlider.qml",
+      "sha256": "07AAB59CB0DE453090268A7EC78DFEBB0498F23A91F9CEDB175AD1B3D6E4E754",
+      "bytes": 8863
+    },
+    {
+      "path": "panel/QtPanel/components/SbSliderField.qml",
+      "sha256": "B7E94B00B8EFC64ECFF0C159BC5611395E9D5736FAAEC39DCC3274975800DD87",
+      "bytes": 4495
+    },
+    {
+      "path": "panel/QtPanel/components/SbSpinBox.qml",
+      "sha256": "1A8681B23D920FC7C6FAA2ADBA16FCF57D82AEA2DB1780E9760DB27DB2C85DA7",
+      "bytes": 3451
+    },
+    {
+      "path": "panel/QtPanel/components/SbSubhead.qml",
+      "sha256": "E8480F4BDD97D47894CDFFE024E98F2C636DE070590B1E2C1ABE8B1630809553",
+      "bytes": 1274
+    },
+    {
+      "path": "panel/QtPanel/components/SbSwitch.qml",
+      "sha256": "10E64D11649034FAC37287F3F95A7BE525DB8B370DFF8D55B79D85F4E439A076",
+      "bytes": 4072
+    },
+    {
+      "path": "panel/QtPanel/components/SbTextField.qml",
+      "sha256": "DA7F1FA95EB4934D888CEE7E909632B85E7ABFB415FE3819E5435AFE3EF42A24",
+      "bytes": 5389
+    },
+    {
+      "path": "panel/QtPanel/components/SbToast.qml",
+      "sha256": "91B26D335A5DED81F855049C001A7DC729A684D43856877E89230E351E78E19B",
+      "bytes": 7152
+    },
+    {
+      "path": "panel/QtPanel/components/SbToolTip.qml",
+      "sha256": "6C0593CA2FC44D01DF7954F8A7FF29D18F923ED3FEC287F17F6D99A9E9F99C47",
+      "bytes": 4747
+    },
+    {
+      "path": "panel/QtPanel/components/SegmentTrack.qml",
+      "sha256": "E9CFC5C63512AF16B3956881620073CEFCCDD5420528AF350F3E463CF7FADBF3",
+      "bytes": 1654
+    },
+    {
+      "path": "panel/QtPanel/components/SettingsField.qml",
+      "sha256": "0E461BB90E694D174B4DB0839B7E4EF04F574F78F2CD49C08DECA31706A22B3C",
+      "bytes": 6560
+    },
+    {
+      "path": "panel/QtPanel/components/SidebarNav.qml",
+      "sha256": "3DC7896CCCB088CE125F7688B0A02C1806B3749B3BE650354A417D6485C85636",
+      "bytes": 9379
+    },
+    {
+      "path": "panel/QtPanel/components/StatusChip.qml",
+      "sha256": "F837BBC9D80864109379985D545E9FE3E5008117D284F3F55001E819C2D3036B",
+      "bytes": 6669
+    },
+    {
+      "path": "panel/QtPanel/components/TopBar.qml",
+      "sha256": "71B475F66DFF5FE0A0061209220135D1BA79F640ACF64BFF5E0FD993B2CE91F8",
+      "bytes": 9094
+    },
+    {
+      "path": "panel/QtPanel/components/UpdateNotice.qml",
+      "sha256": "4E60981337212E00ED8D24B9006413D7AA77AC1C2AC453180C8798F794ECE67E",
+      "bytes": 3272
+    },
+    {
+      "path": "panel/QtPanel/components/WheelScroller.qml",
+      "sha256": "50B6B3C8BAF0F84224B632EDA73A77859E67B76FEFC20383F581CB486528D741",
+      "bytes": 6341
+    },
+    {
+      "path": "panel/QtPanel/controllers/__init__.py",
+      "sha256": "6DA0A9B51A4D3B008D1B0630B5F418865A80DA5FD595AC57B9ADA0A2A63090CA",
+      "bytes": 59
+    },
+    {
+      "path": "panel/QtPanel/controllers/game_telemetry_controller.py",
+      "sha256": "815F2A2FBA3123BBDCE275653FC88D59F8CC0F119B584FCCD4E715A46A561EB5",
+      "bytes": 77574
+    },
+    {
+      "path": "panel/QtPanel/controllers/performance_controller.py",
+      "sha256": "9E26BB4FB571DB4873801B24C5987CB1E25E2A04A0E4EBE07DA7CF87F8D8301F",
+      "bytes": 5584
+    },
+    {
+      "path": "panel/QtPanel/controllers/telemetry_levels.py",
+      "sha256": "207A9A1B69A3569722B5209BF841D96CF88507B25452FF133BD36362DB11606A",
+      "bytes": 10837
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/brand/art-dashboard.blur.jpg",
+      "sha256": "C0DD1336CD11472FAE99933D04C43ED12DC4D29D036E3ECDEE123E673CEBE29B",
+      "bytes": 4983
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/brand/dots-8.png",
+      "sha256": "AF895D990D06D524D65762A65984AF9DBD2AFFD7781EA34D9842BDCC6A1ED9C1",
+      "bytes": 73
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/brand/mark-128.png",
+      "sha256": "000AFD62507BD526586BC3E053A4F5010CBC7F8C360BE9EAEA392E6B2A4CAA3F",
+      "bytes": 14537
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/brand/mark-32.png",
+      "sha256": "B3EE72F339E9AF539C96842CD813CA35258C4EA16F3EC005BE2F668B006DF0AA",
+      "bytes": 1676
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/brand/mark-64.png",
+      "sha256": "AADFB09278E29FE8DFB947004489C9B2853672A64DF15CBADBC3DBD673C6A8FB",
+      "bytes": 4546
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/EveSilhouettes.js",
+      "sha256": "326F84ADDA96E1467D74B5CB9E71EE441FAF85CC2E8784B1E82A80897A2468D1",
+      "bytes": 9432
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/FriendlyCopy.js",
+      "sha256": "4BBB7D18FE1B75B6EFBD8386B9534870CA76CDD99FF047CDE33BF0AB29F39D0D",
+      "bytes": 8898
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/Icons.js",
+      "sha256": "CBFDCB03028B0946C4D6037AE6E0EF84A14ACB77D14BBD76B9D69E7B2AE07EA8",
+      "bytes": 3713
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/PageTheme.js",
+      "sha256": "E6E92CC6F471BE8868A8BBF067EC4A4CA7E559A47D82FA3FF2EF8F44C685CE24",
+      "bytes": 3834
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/Status.js",
+      "sha256": "7F494607BCEA103FB67C6ABBA145D047766F2E7E195170D72295C05C11E5CA9A",
+      "bytes": 9552
+    },
+    {
+      "path": "panel/QtPanel/DesignSystem/Tokens.qml",
+      "sha256": "51F62819C3DF99F462B8CD712350B9A98D6377001D6D4802CFBC4F03D4AE73BA",
+      "bytes": 14731
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/__init__.py",
+      "sha256": "BE42B85C0DCE7E79E585C17A384D9DAE4E8F410A296D633103A1C9FE1F3CA605",
+      "bytes": 71
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/file_watch.py",
+      "sha256": "CB992415A0E71609DF7F207607A87A75ADA210E80C96CA28D7C6B30153A389F9",
+      "bytes": 2959
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/native_files.py",
+      "sha256": "2F92A0F03B50BD53FC67B8925D4A2BE920617A015F9BAF85AC4748C65D6E5E18",
+      "bytes": 7568
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/pace_probe.py",
+      "sha256": "A12F0D8158C929A4A280FBCE4F3CC2B5D1AA91504390349CCE1139C7444D24E0",
+      "bytes": 19239
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/panel_log.py",
+      "sha256": "82040999D8A071E59E979BD1323A5B8A3776C434024ACF8FBEE506B67EE973D4",
+      "bytes": 5360
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/runtime.py",
+      "sha256": "FDF0552DD99265E49E64E338903662E89A9E143B2E26E848F7D79D4D9A0B1DCC",
+      "bytes": 3022
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/screen_geometry.py",
+      "sha256": "35226137BA9327BCE3166706458BD33F06F61415DADA16CC9D689D774E20BA50",
+      "bytes": 12767
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/system_motion.py",
+      "sha256": "217FEF02313C08C4A6A0344FA5F9BF38309236A5E992756D715C2E8C2946A34E",
+      "bytes": 924
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/tasks.py",
+      "sha256": "10C6641702EB8F39F64A8DFA76FA985CB4707C116F01A5743C3629D80E047202",
+      "bytes": 2578
+    },
+    {
+      "path": "panel/QtPanel/infrastructure/window_placement.py",
+      "sha256": "95FB9ACD494CEC882C1885E15DB2607075C2EB6CE69709108F915A65F1ADF0D5",
+      "bytes": 16573
+    },
+    {
+      "path": "panel/QtPanel/main.py",
+      "sha256": "4AE9CD5511949CE45FD7FA8FFDC6871424AF034453F83325506C51425EA5B34E",
+      "bytes": 336575
+    },
+    {
+      "path": "panel/QtPanel/main.qml",
+      "sha256": "87EE0C4F3B26E3A14D8BD15BED28F1875716AF243BB16DCC36BEA08BCF0A5BCF",
+      "bytes": 10935
+    },
+    {
+      "path": "panel/QtPanel/models/__init__.py",
+      "sha256": "E209C269F472B42448CB06E24EE0F0CFACFCDE4767F579D664FCB0F07C7E9510",
+      "bytes": 32
+    },
+    {
+      "path": "panel/QtPanel/models/catalog_filter.py",
+      "sha256": "82C5132F3D22BC6DF0BA51937DEF9E492D69CCA56B4D24E63BEC9D4691CA2170",
+      "bytes": 3181
+    },
+    {
+      "path": "panel/QtPanel/models/item_model.py",
+      "sha256": "BB203BA53D9470861F76E9E437136D9A87F3B5CBC4A45F26D7CC2C8584620D7D",
+      "bytes": 3892
+    },
+    {
+      "path": "panel/QtPanel/pages/GameplayPage.qml",
+      "sha256": "C167F2C82AD375E643365D0672478B646C15088801A53366A2E7AE228FC8D8F4",
+      "bytes": 14795
+    },
+    {
+      "path": "panel/QtPanel/pages/ItemsPage.qml",
+      "sha256": "8AE8EDA3408D71EEB06CE8D60A54085BFF8CD803B8C98C01AB583BA448C7A33D",
+      "bytes": 38927
+    },
+    {
+      "path": "panel/QtPanel/pages/SettingsPage.qml",
+      "sha256": "6E5CFEAFD2A1DC269FC4641A1DFF011C71F7F49496459B70733644DBFCFE22CC",
+      "bytes": 14052
+    },
+    {
+      "path": "panel/QtPanel/pages/SupportLink.js",
+      "sha256": "F926C1620E6D39388DC24C5256AC81FDBFD977607AF24E05667723BBB324D05C",
+      "bytes": 282
+    },
+    {
+      "path": "panel/QtPanel/pages/SupportPage.qml",
+      "sha256": "F9071C4BF238F294FD61CD90B9FFF5B7570F9809455E63568889BC4B2134E277",
+      "bytes": 33501
+    },
+    {
+      "path": "panel/QtPanel/PRODUCTION_ASSETS.txt",
+      "sha256": "084F26B4DC79E718888AB328471E3C0EF41EFD3D6CD59CFDE944F665AF23B618",
+      "bytes": 77
+    },
+    {
+      "path": "panel/QtPanel/services/__init__.py",
+      "sha256": "E54F905AFD965FB4F7B7377B50E5E8003220EE8218F3FA846733111BFD8F8ED1",
+      "bytes": 63
+    },
+    {
+      "path": "panel/QtPanel/services/boss_retry_service.py",
+      "sha256": "EE99F9516719B714A53282130A107F3FDF71BBE309C9A34AE256822EC2BBC04C",
+      "bytes": 33662
+    },
+    {
+      "path": "panel/QtPanel/services/bug_report.py",
+      "sha256": "4424B214AC2569134E721247C07BF9E309C5C83C0903854BC51895D11B9B593E",
+      "bytes": 22896
+    },
+    {
+      "path": "panel/QtPanel/services/game_start.py",
+      "sha256": "2330CB0235F00D78DCC665B8D7111033B61DD5204D38EAC29FA139452E272B5A",
+      "bytes": 15881
+    },
+    {
+      "path": "panel/QtPanel/services/god_service.py",
+      "sha256": "D08DBD0B91FE5AAA7B16CA377DAAD547247D9B3E1133B8BB0B9CCF11F57605A5",
+      "bytes": 45466
+    },
+    {
+      "path": "panel/QtPanel/services/health_service.py",
+      "sha256": "85A74F95D126FEB2E0A8B33CD00929863700280B2A5327EAABA4953756626CC6",
+      "bytes": 12230
+    },
+    {
+      "path": "panel/QtPanel/services/heartbeat_service.py",
+      "sha256": "94209F8B4F7224EA9F6C61B0E2C1DA649D027EAACA5E1FA6A08CBB7132DD6B51",
+      "bytes": 8755
+    },
+    {
+      "path": "panel/QtPanel/services/instant_boss_restart.py",
+      "sha256": "4BF0257FDD2A1406D00845EA5C1FEFD804109EDB8C3EDEA924C77CE8099EDAC7",
+      "bytes": 16848
+    },
+    {
+      "path": "panel/QtPanel/services/item_catalog.py",
+      "sha256": "1DA4FAC037608A2942BC29346F63223EC23358903B7717CB2B0E12BEA40DF21F",
+      "bytes": 11953
+    },
+    {
+      "path": "panel/QtPanel/services/item_live_add_service.py",
+      "sha256": "B1E1B31AC50FDD465A5CC19A2F46930DF4FA4208C45CBA5F5F407CC962088D5A",
+      "bytes": 45324
+    },
+    {
+      "path": "panel/QtPanel/services/item_policy.py",
+      "sha256": "9C3886CB8CEFBE15C829D73867AB9402F7BA3930B8791AD9D10E8786233F5A94",
+      "bytes": 13209
+    },
+    {
+      "path": "panel/QtPanel/services/item_probe.py",
+      "sha256": "D71CFB213C3848CD5355CFC79FC739045E9B43CE3C74142DA501D5439DA0B945",
+      "bytes": 17420
+    },
+    {
+      "path": "panel/QtPanel/services/mod_reload_service.py",
+      "sha256": "7545463F82BE00254105C23E2C2C0543A01D5306E3C37F05E0FED4D0EAFF3A90",
+      "bytes": 3149
+    },
+    {
+      "path": "panel/QtPanel/services/movement_stability.py",
+      "sha256": "9CB83BA55B6A8F2F731A52231004118684E8D2B390C9CEB7F7D552AB02855B9A",
+      "bytes": 14214
+    },
+    {
+      "path": "panel/QtPanel/services/native_status.py",
+      "sha256": "D8EDE8163616AECA74A8A10578461195463C72BA95DDC0663F709A914254B74C",
+      "bytes": 11528
+    },
+    {
+      "path": "panel/QtPanel/services/old_ue4ss_files.py",
+      "sha256": "ECF39C661A4178E3276811DE37A452651E5C0072B7F0516D3104B181C93199CA",
+      "bytes": 4383
+    },
+    {
+      "path": "panel/QtPanel/services/process_service.py",
+      "sha256": "0BA4EE6EE931D9929420F180B925B69E6223B868ADF94C876588D2BA2E129ABF",
+      "bytes": 4873
+    },
+    {
+      "path": "panel/QtPanel/services/save_snapshots.py",
+      "sha256": "129425201139D09206D0CC21E2D5F725F93A0205FB7527146732FFF26A1FFB1C",
+      "bytes": 45878
+    },
+    {
+      "path": "panel/QtPanel/services/update_check.py",
+      "sha256": "404521D3246C80B904E1AD4E5A2460574C2A574982546393EF5491CA951CC286",
+      "bytes": 5021
+    },
+    {
+      "path": "panel/QtPanel/shaders/eve_wallpaper_motion.frag",
+      "sha256": "DCCB2634E631007E0B1223732F72042CC1944983508AEB7FBA8C4FF96A0DA222",
+      "bytes": 2027
+    },
+    {
+      "path": "panel/QtPanel/shaders/eve_wallpaper_motion.vert",
+      "sha256": "5154FC32F551BD5DF91EDF0D29A9F98A5F5723A16E4914C12842B7AEA2E0F479",
+      "bytes": 468
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_authored_pose_atlas.frag",
+      "sha256": "D35E460F254B4F8E1DD96CD35451FDE0CC60308F1D3EF9D13A15A84FDB00E95F",
+      "bytes": 340
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_authored_pose_atlas.vert",
+      "sha256": "D753B4E33026C2E076157AC5C81B9532848E5A8884D62528AB0851AB8BA911C5",
+      "bytes": 400
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_cleaning_occupancy.frag",
+      "sha256": "0B7DC496089CD3B3850BE8CB1887327BFEC2A2B66C610CC1CB9E3E1C2280AE0F",
+      "bytes": 695
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_cleaning_rig.frag",
+      "sha256": "00678219591284E26ABB6E810D3FD2BCD08F9DD52B7CDED1F3FF7A9361377EA3",
+      "bytes": 427
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_cleaning_rig.vert",
+      "sha256": "468359319D78578362BF4323E4972E042221BB40204FC9066C0A7B591938C03F",
+      "bytes": 1867
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_drone_light.frag",
+      "sha256": "1285D3203A92C6CC84C78582FC0B37F6A8B464B8C43F6F2567EE8B4924292F4D",
+      "bytes": 612
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_drone_light.vert",
+      "sha256": "3FB191059CDF595FED72FDF657C87073445B69C7F36E3A1B0DF8F170B41AA7F5",
+      "bytes": 362
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_dynamic_cleanplate_feather.frag",
+      "sha256": "221AA97B1C1F700E9A48233AE108247D96F89FC0A22E3A2BB451793A11EE07D6",
+      "bytes": 2584
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_hair_mesh.frag",
+      "sha256": "99045B26A57B997BBBF6CDEBE8F3142A4BDB3ED9121704EE86B63461A31317B2",
+      "bytes": 362
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_hair_mesh.vert",
+      "sha256": "90E56EA433A1CF87D3003467C66F454A101234A0CC8F139BDFB0FD564C6C98DB",
+      "bytes": 3601
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_live_surface.frag",
+      "sha256": "4B4FBD83E88F13E6AAAAFC1706129164591B66E74D9BDA7639519DE5CDC62392",
+      "bytes": 7730
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_live_surface.vert",
+      "sha256": "4D067205BE54A2301EB5AED8EA00CDA55F5306F4C57D9D360D6893C07428C832",
+      "bytes": 720
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_localized_cleaning.frag",
+      "sha256": "7031FB0A6C609F0670ED2F8E2B5ED3A0ABC4FC98EA9D62B4FD3C8D4C10836448",
+      "bytes": 453
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_localized_cleaning.vert",
+      "sha256": "CCB428A5BDAFBD1D2768765FC55395392C0B7C65374A66E68FAB6FC43214C35D",
+      "bytes": 1007
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_masked_cleanplate.frag",
+      "sha256": "3C3D203CB5FAD1790FD8AD6F1AEC18A87CB4887928B96CBF6D6F6DC6D75B0AA7",
+      "bytes": 1685
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_masked_cleanplate.vert",
+      "sha256": "A9A9973013558492DBE4BC97AC0BA389A47C710DA4BA0C0C0E9E6102A38C331C",
+      "bytes": 340
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_rain_trails.frag",
+      "sha256": "AD847D83EEB1D513407509DE5C1347DDEA5ED0D7AFE0A26E53EBD793C149AA03",
+      "bytes": 4167
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_rain_trails.vert",
+      "sha256": "5A060A757B6BDACD76B3B1C7098461CD32A784F25F2AB6DD96264A6248143C8B",
+      "bytes": 429
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_semantic_cleaning_mask.frag",
+      "sha256": "75BF675734F4E93CFFA031CCD6DB396287FC17F7415962A91D9BE3D675DE1619",
+      "bytes": 1107
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_semantic_drone_mask.frag",
+      "sha256": "4EBCA79D9FB2881A5ADA30FE76E1EA0B492AEBC2D09C2C927A5EE2DD4BB00409",
+      "bytes": 780
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_semantic_hair_mask.frag",
+      "sha256": "15E22980F89CC4BC8CF751D6463C70EECE3CDC2FF1C79E69B9D9AA968FB4272B",
+      "bytes": 829
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_semantic_mask.frag",
+      "sha256": "C838EE9F0064242837AEE47CA960891FE2911DF24334D157077F86903C72F7A2",
+      "bytes": 730
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_semantic_mask.vert",
+      "sha256": "671699B1FD195C545B5B1CAC316610D6DE17A8A043CC67DD9E6C99E16DA8611B",
+      "bytes": 390
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_skinned_cleaning_rig.frag",
+      "sha256": "BEFF0A9BE3A403C1E38599FD1BC4ACBA74DE95B0CC382F32A84EF1A3CCB636FC",
+      "bytes": 3083
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_skinned_cleaning_rig.vert",
+      "sha256": "14AFC0F31062130C95B29C131E62B0469ADB30D02AA19C734A763222CAB8D72C",
+      "bytes": 6380
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_splash_jet.frag",
+      "sha256": "13B362F79ECD969F81BF2DD6AD48B64B0A0606C5E26FC8AE3625611AD1CA6334",
+      "bytes": 1980
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_splash_jet.vert",
+      "sha256": "FD16371CCDD64B898195A844C910273CDE4D7B3658DBC41881DB17B22EA14153",
+      "bytes": 405
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_splash_occlusion.frag",
+      "sha256": "0455ACA90B92AEF5BA23DE5649048341DE941D00E6991B1350F40BDD3A61A035",
+      "bytes": 1937
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_splash_occlusion.vert",
+      "sha256": "B1002E19EA8461479143B8CF04E6AAE3A789AF96FA54EBE75F7B819DF1F4EB34",
+      "bytes": 1769
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_additive_rain.frag",
+      "sha256": "F2DC05510C888F43063BF9203E4CA43EDBAD3F1FE9C9AAFA8E6D8F748081445C",
+      "bytes": 4500
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_additive_rain.vert",
+      "sha256": "30FEB655BBBDC62F795E5688ABE14E536BC339081371BC8BA8EF37C2E99956E4",
+      "bytes": 514
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_analytic_splash.frag",
+      "sha256": "45D891BCAB9AA53EE8AF0162D2A070CDC35CAAF14CF2DC65AA3CED781D349FE6",
+      "bytes": 20109
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_analytic_splash.vert",
+      "sha256": "59D302BF12F0A204FFA096CD1CAC7BDF5B639645FCEF43AEA2ECBEC6F7C22465",
+      "bytes": 976
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_batched_rain.frag",
+      "sha256": "64023794B6CAE3EDA213E931E340CBCDE8FE730C9EDEDFA94F268920006B1C6E",
+      "bytes": 4331
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_batched_rain.vert",
+      "sha256": "153101E85C93967814E4FFA382F4D484188609B4D6F63DB83845225B747A6B26",
+      "bytes": 459
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_contact_ripple.frag",
+      "sha256": "90D4FC86095DD53C8F075B33448A7E19010024A9B739AF18FC2A1D24480278B7",
+      "bytes": 17546
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_contact_ripple.vert",
+      "sha256": "1AD064C85C4AD9000F4A9028820E4DCE0392D288A31999023D7377D3F90EEBAC",
+      "bytes": 994
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_lens_drop.frag",
+      "sha256": "C972FA76446A0E5302DD25CA0E065C7088AF6C29D99295063AA15C043BEFBFA7",
+      "bytes": 5164
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_lens_drop.vert",
+      "sha256": "9656DE37590E35955BDE0CD0B41C436897FF2F545AC363D0125B1E837A8D0869",
+      "bytes": 522
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_light_shaft.frag",
+      "sha256": "ADB1E96F9D43EF7E53A1A28BAA0877B214C013E188509F578A28D5699FAEEA23",
+      "bytes": 1340
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_light_shaft.vert",
+      "sha256": "1CDFB107F6A8DC76B535C3BEE747D9F1493E5C007D4345066E5568299A16219E",
+      "bytes": 454
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_splash.frag",
+      "sha256": "9A2A34517700165C5B7EFD131D6EF08020116652A937C9E07AFE2D3D6F488F3C",
+      "bytes": 9261
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_splash.vert",
+      "sha256": "4414D594EA9C63E23358B2DFE4E9DC2443026A71811EEE74784DC30980069D5F",
+      "bytes": 630
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_surface.frag",
+      "sha256": "FE95E66F6488A77C5D34AF5E7B5ED1E7D63F0D124C512E7AD1C8C09BB8E4D49A",
+      "bytes": 2028
+    },
+    {
+      "path": "panel/QtPanel/shaders/r50_wpe_surface.vert",
+      "sha256": "70E2705A59E30CC12AB74C96CE0E965ECC171F2B2FC55489867A0A2620212068",
+      "bytes": 608
+    },
+    {
+      "path": "panel/QtPanel/StellarBladeControlPanel.optimized.spec",
+      "sha256": "5E8D8D4147CCC6AA27C0ED8AAAF965CE961A6B48132C78F503027DB76CF40A8E",
+      "bytes": 4878
+    },
+    {
+      "path": "panel/QtPanel/tools/package_runtime_compat.py",
+      "sha256": "C5AA25589DEF9980F21D3B89AE180B8BAB2A94B49D07C74BC3DAFC5448225032",
+      "bytes": 7834
+    },
+    {
+      "path": "panel/QtPanel/UI_REVISION",
+      "sha256": "AB5F19049C73767C4D56F82511A61C7DDB171C89004BFDBDDE40C6249E80E412",
+      "bytes": 23
+    },
+    {
+      "path": "panel/tools/build_eve_icon.py",
+      "sha256": "A9F7F108992ABFB16DFBC8241FE57CECD81260AE63E3A731475BA332CA1F80CA",
+      "bytes": 3551
+    },
+    {
+      "path": "panel/tools/collect_qt_assets.py",
+      "sha256": "C22D53B4E825F692EEC72C54CF579393F42B10FCD1D3401C3779CE45D324C175",
+      "bytes": 3762
+    },
+    {
+      "path": "panel/tools/PresentMon/LICENSE.txt",
+      "sha256": "156994D5134CB90BBA8C90488A570BF214EC04C449B04FBDDC1FE3B8B09DF189",
+      "bytes": 1067
+    },
+    {
+      "path": "panel/tools/production_qml.py",
+      "sha256": "ACCC4EAC16B9C6B10D4280937B98827C8B2EC9B12F95AFF6FF37EA295B529DC2",
+      "bytes": 1407
+    },
+    {
+      "path": "panel/VERSION",
+      "sha256": "0F886717DF79545C6E681DBD1496A2802569802D9758AC28C8DDA35AC7B4F13E",
+      "bytes": 7
+    },
+    {
+      "path": "PANEL-BUILD.md",
+      "sha256": "DCEF8FEA4210C150E84F2E65D10784682CED1D6AF7941DC1E4E88D3DCC035972",
+      "bytes": 3041
+    },
+    {
+      "path": "README.md",
+      "sha256": "859C7C17A373F31A1C13098D43DE90467402E318B821FFA663C3690AD3080AA7",
+      "bytes": 1881
+    },
+    {
+      "path": "SHIPPED-BINARY-MAPPING.json",
+      "sha256": "A11369E99B7E4AB71E47B7C325FD0A29BBC29311660D4469BFE4A5A4E5E10BA2",
+      "bytes": 1178
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "3F1D59EED8E6B561CD5AC5653810388E0ADCED942CCD55D949A4E0A4A9291905",
+      "bytes": 5483
+    }
+  ],
+  "excluded_original_art_input": {
+    "path": "panel/assets/eve-mod-icon-source.png",
+    "reason": "Provided eve.ico and eve-mod-icon-256.png are sufficient build inputs; original artwork source not required."
+  },
+  "support_copy_semantics": "Comments/docs neutralized; native non-comment code exact; Python executable AST/co_code/callables compared after __doc__-only normalization. Raw bytecode constant indexes and line metadata may differ."
+}

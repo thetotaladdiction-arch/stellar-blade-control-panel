@@ -1,0 +1,14 @@
+# CppUserModBase virtual table read from the UE4SS.dll that the game loads
+# (tools/probe_ue4ss_vtable.py). UE4SS.dll SHA-256 F3F0229E8D046824C6D71DB256F1C9BBBDA9652A193643C28FA4E6C329E17670
+# Slot 0 is the scalar deleting destructor. One line per slot: <slot> <signature>
+0 ~CppUserModBase()
+1 on_update()
+2 on_unreal_init()
+3 on_ui_init()
+4 on_program_start()
+5 on_lua_start(Lua&,Lua&,Lua&,vector<Lua*>&)
+6 on_lua_start(wstring_view,Lua&,Lua&,Lua&,vector<Lua*>&)
+7 on_lua_stop(Lua&,Lua&,Lua&,vector<Lua*>&)
+8 on_lua_stop(wstring_view,Lua&,Lua&,Lua&,vector<Lua*>&)
+9 on_dll_load(wstring_view)
+10 render_tab()
