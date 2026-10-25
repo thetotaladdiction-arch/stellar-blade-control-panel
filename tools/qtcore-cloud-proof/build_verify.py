@@ -472,12 +472,33 @@ def build(p, policy):
         cache_path = work / "qt-build/CMakeCache.txt"
         if cache_path.is_file() and cache_path.stat().st_size <= 1024**2:
             shutil.copy2(cache_path, failure / "CMakeCache.txt")
-        configure_log = work / "qt-build/CMakeFiles/CMakeConfigureLog.yaml"
-        if configure_log.is_file() and configure_log.stat().st_size <= LOG_LIMIT:
-            raw = configure_log.read_bytes()
-            pos = raw.find(b"TEST_cpp_winrt")
-            if pos >= 0:
-                (failure / "cpp-winrt-probe.txt").write_bytes(raw[max(0, pos-4096):pos+32768])
+        # Qt's CODE test is HAVE_cpp_winrt, not TEST_cpp_winrt. Preserve the
+        # real compiler output across old/new CMake log formats without loading
+        # or publishing unrelated complete logs. A long configure log is normal.
+        log_inventory = []
+        for log_name in ("CMakeConfigureLog.yaml", "CMakeError.log"):
+            configure_log = work / "qt-build/CMakeFiles" / log_name
+            log_inventory.append({"name": log_name, "exists": configure_log.is_file(),
+                                  "bytes": configure_log.stat().st_size if configure_log.is_file() else 0})
+            if not configure_log.is_file():
+                continue
+            with configure_log.open("rb") as inp:
+                prior, excerpt, remaining = bytearray(), bytearray(), None
+                for line in inp:
+                    if remaining is None and b"cpp_winrt" in line:
+                        excerpt.extend(prior[-4096:])
+                        remaining = 65536 - len(excerpt)
+                    if remaining is not None:
+                        excerpt.extend(line[:remaining])
+                        remaining -= min(len(line), remaining)
+                        if remaining == 0:
+                            break
+                    else:
+                        prior.extend(line)
+                        del prior[:-4096]
+                if excerpt:
+                    (failure / ("cpp-winrt-" + log_name + ".txt")).write_bytes(excerpt)
+        save(failure / "CONFIGURE-LOG-INVENTORY.json", log_inventory)
         for name in ("compiler-version.txt", "configure.txt", "core.txt", "headers.txt", "exports.txt", "imports.txt"):
             path = audit / name
             if path.is_file():
