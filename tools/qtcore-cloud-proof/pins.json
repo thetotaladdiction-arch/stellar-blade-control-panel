@@ -1,0 +1,22 @@
+{
+  "qt_version": "6.11.1",
+  "archive_name": "qtbase-everywhere-src-6.11.1.tar.xz",
+  "source_url": "https://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/qtbase-everywhere-src-6.11.1.tar.xz",
+  "archive_bytes": 50648500,
+  "archive_sha256": "d9594a31228aa23ad6b531719a29b45f0f3989fe6c136d45767ea179f233c1ac",
+  "qglobal_pre_bytes": 13393,
+  "qglobal_pre_sha256": "d099f0dcf93738f16937b5b93ab44190fe5803e79f4da77258c59c464c54f91b",
+  "qglobal_post_bytes": 13677,
+  "qglobal_post_sha256": "c28abccea54afc51b28d942b7a592827010fcf06cef47bd83f57287e4831ac1e",
+  "msvc": "14.51.36231",
+  "sdk": "10.0.26100.0",
+  "marker_export": "AeroneusQtCoreProof_20261024_v1",
+  "marker_value": "Aeroneus.QtCore.6.11.1.Recombined.Proof.20261024.v1",
+  "max_artifact_bytes": 402653184,
+  "compiler_sha256": {
+    "link.exe": "e8c524347b8bc87fba790d254c8a3b902bf1a4b63807093b816d992940af3791",
+    "cl.exe": "dc8426b8760d92cf757df3d10b9f0244a95b454ff43194a58161568a0ec70d53",
+    "c2.dll": "a557ac7b90fb5a68d393da2dce7ada52c91efad2a6956cc62ea23da392e9be89",
+    "c1xx.dll": "363135c271bcb76ce1eeb179b22a9e410d72f8501b99171fb7cd71ea0e7a9166"
+  }
+}

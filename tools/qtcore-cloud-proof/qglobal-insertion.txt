@@ -1,0 +1,8 @@
+
+// Aeroneus private compatibility proof, 2026-10-24. Additive export only.
+#if defined(Q_OS_WIN) && !defined(QT_BOOTSTRAPPED)
+extern "C" Q_CORE_EXPORT const char *AeroneusQtCoreProof_20261024_v1() noexcept
+{
+    return "Aeroneus.QtCore.6.11.1.Recombined.Proof.20261024.v1";
+}
+#endif
