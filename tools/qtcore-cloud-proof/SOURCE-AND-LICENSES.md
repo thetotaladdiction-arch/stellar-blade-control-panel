@@ -25,8 +25,13 @@ It uses preinstalled MSVC 14.51.36231, SDK 10.0.26100.0, CMake, Ninja and Python
 release/shared/force-debug-info/headersclean, bundled zlib, Windows SDK ICU,
 and required C++/WinRT support matching the original library's three factory-cache
 exports. The selected SDK's preinstalled projection header is checked and its
-include directory is added only if vcvars omitted it. No header patch or installer.
-no examples/tests, and only the Core target with two compiler workers. The actual
+include directory is added only if vcvars omitted it. MSVC 19.51 rejects the SDK's
+C++17 experimental-coroutine include with STL1011. The build explicitly defines
+Microsoft's _SILENCE_EXPERIMENTAL_COROUTINE_DEPRECATION_WARNINGS compatibility
+macro, retaining Qt's C++17 mode and the SDK headers. This suppresses only that
+deprecation diagnostic; the WinRT compile/link test, ABI checks and three required
+exports still must pass. No header patch, forced feature-test result or installer.
+There are no examples/tests, and only the Core target with two compiler workers. The actual
 CMake configuration must be RelWithDebInfo with the dynamic release CRT (/MD).
 Exact mode pins compiler component hashes; other tool identities/versions are
 audited. An explicit --compiler-policy compatible-14.51 invocation instead accepts

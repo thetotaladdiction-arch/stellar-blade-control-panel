@@ -232,6 +232,7 @@ def configure(src, build, p, env, tools, audit):
             "-nomake", "examples", "-nomake", "tests", "-qt-zlib", "-feature-winsdkicu", "-feature-cpp-winrt",
             "-prefix", str(build.parent / "unused-install-prefix"), "--", "-G", "Ninja",
             "-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL", "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+            "-DCMAKE_CXX_FLAGS_INIT=/D_SILENCE_EXPERIMENTAL_COROUTINE_DEPRECATION_WARNINGS",
             "-DCMAKE_AUTOGEN_PARALLEL=2", "-DCMAKE_JOB_POOLS=qt_compile=2;qt_link=1",
             "-DCMAKE_JOB_POOL_COMPILE=qt_compile", "-DCMAKE_JOB_POOL_LINK=qt_link",
             "-DCMAKE_EXPORT_PACKAGE_REGISTRY=OFF", "-DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON",
@@ -274,6 +275,8 @@ def verify_config(src, build, p, tools, audit):
               "FETCHCONTENT_FULLY_DISCONNECTED": "ON", "FETCHCONTENT_UPDATES_DISCONNECTED": "ON"}
     for key, value in wanted.items():
         need(cache_value_matches(cache.get(key), value), "CMake cache contract failed: " + key)
+    need(re.search(r"(?:^|\s)/D_SILENCE_EXPERIMENTAL_COROUTINE_DEPRECATION_WARNINGS(?:\s|$)",
+                   cache.get("CMAKE_CXX_FLAGS", "")), "required C++17 SDK compatibility definition missing")
     for key, path in {"CMAKE_HOME_DIRECTORY": src, "CMAKE_C_COMPILER": tools["cl"],
                       "CMAKE_CXX_COMPILER": tools["cl"], "CMAKE_RC_COMPILER": tools["rc"],
                       "CMAKE_MT": tools["mt"], "CMAKE_MAKE_PROGRAM": tools["ninja"]}.items():
@@ -316,6 +319,7 @@ def verify_config(src, build, p, tools, audit):
     need(len(qglobal) == 1, "actual Core qglobal compile command absent/ambiguous")
     need(not any(re.search(r"(?:^|\s)[/-]MP\d*(?:\s|$)", c.get("command", "")) for c in commands), "unbounded compiler /MP")
     save(audit / "CONFIGURATION-PROOF.json", {"cache_contract": wanted,
+         "cxx_flags": cache["CMAKE_CXX_FLAGS"],
          "actual_cache_values": {k: cache[k] for k in wanted}, "configuration": "RelWithDebInfo",
          "target_type": target["type"], "qglobal_compile_command": qglobal[0], "native_tests_run": False})
     for path in (build / "CMakeCache.txt", build / "config.opt", build / "config.summary",
