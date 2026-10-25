@@ -229,7 +229,7 @@ def configure(src, build, p, env, tools, audit):
     for kind in ("codemodel-v2", "cache-v2", "toolchains-v1"):
         (query / kind).write_bytes(b"")
     args = [str(src / "configure.bat"), "-release", "-shared", "-force-debug-info", "-headersclean",
-            "-nomake", "examples", "-nomake", "tests", "-qt-zlib", "-feature-winsdkicu", "-feature-cpp_winrt",
+            "-nomake", "examples", "-nomake", "tests", "-qt-zlib", "-feature-winsdkicu", "-feature-cpp-winrt",
             "-prefix", str(build.parent / "unused-install-prefix"), "--", "-G", "Ninja",
             "-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL", "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
             "-DCMAKE_AUTOGEN_PARALLEL=2", "-DCMAKE_JOB_POOLS=qt_compile=2;qt_link=1",

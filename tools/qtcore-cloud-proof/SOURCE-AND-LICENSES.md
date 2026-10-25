@@ -23,6 +23,9 @@ The artifact also retains Qt's LICENSES directory separately. Preserve all of it
 The exact configure/build command is in audit/CONFIGURE-ARGV.json and the script.
 It uses preinstalled MSVC 14.51.36231, SDK 10.0.26100.0, CMake, Ninja and Python;
 release/shared/force-debug-info/headersclean, bundled zlib, Windows SDK ICU,
+and required C++/WinRT support matching the original library's three factory-cache
+exports. The selected SDK's preinstalled projection header is checked and its
+include directory is added only if vcvars omitted it. No header patch or installer.
 no examples/tests, and only the Core target with two compiler workers. The actual
 CMake configuration must be RelWithDebInfo with the dynamic release CRT (/MD).
 Exact mode pins compiler component hashes; other tool identities/versions are
