@@ -413,7 +413,11 @@ def build(p, policy):
         need(any(x.startswith("vcruntime140") and not x.endswith("d.dll") for x in low), "release dynamic VC runtime import missing")
         need(not any(re.fullmatch(r"(?:vcruntime\d+(?:_\d+)?|msvcp\d+)d\.dll|ucrtbased\.dll", x) for x in low), "debug CRT import")
         need(not any(x.startswith("qt6") for x in low), "unexpected other Qt module import")
-        need("icu.dll" in low, "Windows SDK ICU import missing")
+        # Pinned Qt Core CMakeLists links icuuc/icuin for winsdkicu, not icu.
+        # The Windows SDK exposes the codec API via icuuc.dll (icu.dll is
+        # the combined Windows 10 1903+ alternative). The full import report
+        # remains evidence; this does not prove runtime loading on a receiver.
+        need("icuuc.dll" in low or "icu.dll" in low, "Windows SDK ICU codec import missing")
         proof = {"schema": "QtCoreCloudCompatibilityProofV1", "status": "BUILT_FILE_VERIFIED",
                  "qt_version": p["qt_version"], "msvc": p["msvc"], "sdk": p["sdk"],
                  "compiler_policy": p["compiler_policy"], "exact_reference_compiler": p["exact_reference_compiler"],
@@ -453,7 +457,7 @@ def build(p, policy):
         cache_path = work / "qt-build/CMakeCache.txt"
         if cache_path.is_file() and cache_path.stat().st_size <= 1024**2:
             shutil.copy2(cache_path, failure / "CMakeCache.txt")
-        for name in ("compiler-version.txt", "configure.txt", "core.txt"):
+        for name in ("compiler-version.txt", "configure.txt", "core.txt", "headers.txt", "exports.txt", "imports.txt"):
             path = audit / name
             if path.is_file():
                 with path.open("rb") as inp:
