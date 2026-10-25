@@ -152,6 +152,16 @@ def toolchain(p, work, audit, policy):
     need(env.get("WINDOWSSDKVERSION", "").rstrip("\\/") == p["sdk"], "vcvars selected a different SDK")
     need(Path(shutil.which("cl.exe", path=env["PATH"])).resolve() == (compiler / "cl.exe").resolve(), "cl PATH differs")
     sdk = Path(env["WINDOWSSDKDIR"])
+    cppwinrt = sdk / "Include" / p["sdk"] / "cppwinrt"
+    winrt_header = cppwinrt / "winrt/base.h"
+    include_dirs = [x.strip().strip('"') for x in env.get("INCLUDE", "").split(";") if x.strip()]
+    winrt_present = any(Path(x).resolve() == cppwinrt.resolve() for x in include_dirs)
+    save(audit / "SDK-WINRT.json", {"header_exists": winrt_header.is_file(),
+         "header_sha256": sha(winrt_header) if winrt_header.is_file() else None,
+         "cppwinrt_include": str(cppwinrt), "vcvars_included_cppwinrt": winrt_present})
+    need(winrt_header.is_file(), "preinstalled selected SDK C++/WinRT header missing")
+    if not winrt_present:
+        env["INCLUDE"] = str(cppwinrt) + ";" + env.get("INCLUDE", "")
     selected = {"cl": compiler / "cl.exe", "dumpbin": compiler / "dumpbin.exe",
                 "rc": sdk / "bin" / p["sdk"] / "x64/rc.exe",
                 "mt": sdk / "bin" / p["sdk"] / "x64/mt.exe"}
@@ -219,7 +229,7 @@ def configure(src, build, p, env, tools, audit):
     for kind in ("codemodel-v2", "cache-v2", "toolchains-v1"):
         (query / kind).write_bytes(b"")
     args = [str(src / "configure.bat"), "-release", "-shared", "-force-debug-info", "-headersclean",
-            "-nomake", "examples", "-nomake", "tests", "-qt-zlib", "-feature-winsdkicu",
+            "-nomake", "examples", "-nomake", "tests", "-qt-zlib", "-feature-winsdkicu", "-feature-cpp_winrt",
             "-prefix", str(build.parent / "unused-install-prefix"), "--", "-G", "Ninja",
             "-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL", "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
             "-DCMAKE_AUTOGEN_PARALLEL=2", "-DCMAKE_JOB_POOLS=qt_compile=2;qt_link=1",
@@ -256,7 +266,7 @@ def verify_config(src, build, p, tools, audit):
         need(m and m[1] not in cache, "invalid/duplicate CMake cache key")
         cache[m[1]] = m[2]
     wanted = {"CMAKE_GENERATOR": "Ninja", "CMAKE_BUILD_TYPE": "RelWithDebInfo",
-              "BUILD_SHARED_LIBS": "ON", "QT_FEATURE_winsdkicu": "ON", "QT_FEATURE_system_zlib": "OFF",
+              "BUILD_SHARED_LIBS": "ON", "QT_FEATURE_winsdkicu": "ON", "QT_FEATURE_cpp_winrt": "ON", "QT_FEATURE_system_zlib": "OFF",
               "QT_BUILD_TESTS": "OFF", "QT_BUILD_EXAMPLES": "OFF",
               "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
               "CMAKE_EXPORT_PACKAGE_REGISTRY": "OFF", "CMAKE_EXPORT_NO_PACKAGE_REGISTRY": "ON",
@@ -338,7 +348,7 @@ def pe_check(dll, p):
         return matches[0]
     nf, nn, funcs, names, ordinals = struct.unpack_from("<IIIII", data, rva(export, 40)[0] + 20)
     need(0 < nn <= nf <= 65536, "PE export count")
-    matches = []
+    matches, exported_names = [], set()
     for i in range(nn):
         nr = struct.unpack_from("<I", data, rva(names + i * 4, 4)[0])[0]
         name = bytearray()
@@ -349,6 +359,7 @@ def pe_check(dll, p):
             name.append(c)
         else:
             raise RuntimeError("unterminated export")
+        exported_names.add(bytes(name))
         if name == p["marker_export"].encode():
             ordinal = struct.unpack_from("<H", data, rva(ordinals + i * 2, 2)[0])[0]
             need(ordinal < nf, "export ordinal bound")
@@ -357,6 +368,10 @@ def pe_check(dll, p):
                  "marker forwarded or not executable")
             matches.append(function)
     need(len(matches) == 1 and p["marker_value"].encode() + b"\0" in data, "marker export/string missing")
+    winrt_exports = {b"??0QWinRTFactoryCacheRegistration@detail@@QEAA@P6AXXZ@Z",
+                     b"??1QWinRTFactoryCacheRegistration@detail@@QEAA@XZ",
+                     b"?clearAllCaches@QWinRTFactoryCacheRegistration@detail@@SAXXZ"}
+    need(winrt_exports <= exported_names, "stock Qt C++/WinRT compatibility exports missing")
     return {"machine": "AMD64", "marker_rva": matches[0], "marker_called": False, "dll_loaded": False}
 
 
@@ -451,12 +466,18 @@ def build(p, policy):
         # On failure expose a small inventory/status only, never incomplete binaries or broad logs.
         failure = work / "failure-artifact"
         failure.mkdir()
-        for name in ("TOOLSET-INVENTORY.json", "COMPILER-HASHES.json", "TOOLS.json"):
+        for name in ("TOOLSET-INVENTORY.json", "COMPILER-HASHES.json", "TOOLS.json", "SDK-WINRT.json"):
             if (audit / name).is_file():
                 shutil.copy2(audit / name, failure / name)
         cache_path = work / "qt-build/CMakeCache.txt"
         if cache_path.is_file() and cache_path.stat().st_size <= 1024**2:
             shutil.copy2(cache_path, failure / "CMakeCache.txt")
+        configure_log = work / "qt-build/CMakeFiles/CMakeConfigureLog.yaml"
+        if configure_log.is_file() and configure_log.stat().st_size <= LOG_LIMIT:
+            raw = configure_log.read_bytes()
+            pos = raw.find(b"TEST_cpp_winrt")
+            if pos >= 0:
+                (failure / "cpp-winrt-probe.txt").write_bytes(raw[max(0, pos-4096):pos+32768])
         for name in ("compiler-version.txt", "configure.txt", "core.txt", "headers.txt", "exports.txt", "imports.txt"):
             path = audit / name
             if path.is_file():
