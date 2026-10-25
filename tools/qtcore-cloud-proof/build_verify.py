@@ -237,6 +237,16 @@ def configure(src, build, p, env, tools, audit):
         audit / "configure.txt", seconds=720)
 
 
+def cache_value_matches(actual, expected):
+    # Qt configure writes FALSE for -nomake while other CMake options use OFF.
+    # Accept equivalent explicit booleans, never a missing/unknown value.
+    if expected == "ON":
+        return isinstance(actual, str) and actual.upper() in {"ON", "TRUE", "1"}
+    if expected == "OFF":
+        return isinstance(actual, str) and actual.upper() in {"OFF", "FALSE", "0"}
+    return actual == expected
+
+
 def verify_config(src, build, p, tools, audit):
     cache = {}
     for line in (build / "CMakeCache.txt").read_text(encoding="utf-8-sig").splitlines():
@@ -253,7 +263,7 @@ def verify_config(src, build, p, tools, audit):
               "CMAKE_FIND_USE_PACKAGE_REGISTRY": "OFF", "CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY": "OFF",
               "FETCHCONTENT_FULLY_DISCONNECTED": "ON", "FETCHCONTENT_UPDATES_DISCONNECTED": "ON"}
     for key, value in wanted.items():
-        need(cache.get(key) == value, "CMake cache contract failed: " + key)
+        need(cache_value_matches(cache.get(key), value), "CMake cache contract failed: " + key)
     for key, path in {"CMAKE_HOME_DIRECTORY": src, "CMAKE_C_COMPILER": tools["cl"],
                       "CMAKE_CXX_COMPILER": tools["cl"], "CMAKE_RC_COMPILER": tools["rc"],
                       "CMAKE_MT": tools["mt"], "CMAKE_MAKE_PROGRAM": tools["ninja"]}.items():
@@ -295,7 +305,8 @@ def verify_config(src, build, p, tools, audit):
                "Core.dir" in c.get("command", "")]
     need(len(qglobal) == 1, "actual Core qglobal compile command absent/ambiguous")
     need(not any(re.search(r"(?:^|\s)[/-]MP\d*(?:\s|$)", c.get("command", "")) for c in commands), "unbounded compiler /MP")
-    save(audit / "CONFIGURATION-PROOF.json", {"cache_contract": wanted, "configuration": "RelWithDebInfo",
+    save(audit / "CONFIGURATION-PROOF.json", {"cache_contract": wanted,
+         "actual_cache_values": {k: cache[k] for k in wanted}, "configuration": "RelWithDebInfo",
          "target_type": target["type"], "qglobal_compile_command": qglobal[0], "native_tests_run": False})
     for path in (build / "CMakeCache.txt", build / "config.opt", build / "config.summary",
                  build / "compile_commands.json", target_path, indices[0],
@@ -439,6 +450,9 @@ def build(p, policy):
         for name in ("TOOLSET-INVENTORY.json", "COMPILER-HASHES.json", "TOOLS.json"):
             if (audit / name).is_file():
                 shutil.copy2(audit / name, failure / name)
+        cache_path = work / "qt-build/CMakeCache.txt"
+        if cache_path.is_file() and cache_path.stat().st_size <= 1024**2:
+            shutil.copy2(cache_path, failure / "CMakeCache.txt")
         for name in ("compiler-version.txt", "configure.txt", "core.txt"):
             path = audit / name
             if path.is_file():
