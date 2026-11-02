@@ -34,7 +34,8 @@ jobs:
           python-version: '3.14.0'
           architecture: x64
       - name: Install exact hash-locked public wheels
-        run: python -I -m pip install --disable-pip-version-check --no-input --no-deps --require-hashes --only-binary=:all: -r automation/timestamp-publisher/requirements.lock
+        run: >-
+          python -I -m pip install --disable-pip-version-check --no-input --no-deps --require-hashes --only-binary=:all: -r automation/timestamp-publisher/requirements.lock
       - name: Existing twelve public dummy-key controls
         run: python -I -B automation/timestamp-publisher/test_online.py
       - name: Actual public ref and eleven-file module smoke
