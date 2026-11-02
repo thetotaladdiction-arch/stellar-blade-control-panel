@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "relative": "source/publisher/__init__.py",
+      "bytes": 298,
+      "sha256": "2defec38104030a0e3c010a99b7f4e36ff018745f1bbed863465f0be32d7000a"
+    },
+    {
+      "relative": "source/publisher/staging.py",
+      "bytes": 28049,
+      "sha256": "da342a68e1afe82b70b768c6e7c96cb2b16b219f3af35c64bdbf66a2d2096c8c"
+    },
+    {
+      "relative": "source/publisher/public_state.py",
+      "bytes": 6592,
+      "sha256": "46f752d14dd7b4fb1765edef43a193bfc4a7c811b046e71481b79b55c285f9cc"
+    },
+    {
+      "relative": "source/publisher/renewal.py",
+      "bytes": 10651,
+      "sha256": "8e9c215905e91cddee7b51e2c1bd702577004a9c73ebdecd68ce23f1c41294d3"
+    },
+    {
+      "relative": "source/publisher/repository.py",
+      "bytes": 22494,
+      "sha256": "f13156dc09a221b3e995cedf9dab9f0fdb1981556e3909b0698a72cb482ba24a"
+    },
+    {
+      "relative": "source/publisher/git_operator.py",
+      "bytes": 56267,
+      "sha256": "ecf52c67c3ed7f26d0444210046e06af5ff906c6ebfec39679444b06d8b09da7"
+    },
+    {
+      "relative": "source/updater/__init__.py",
+      "bytes": 1299,
+      "sha256": "eca2d4f587c9c6deb7dac08d8f50deff19c85d42bfe09b7aca4239d1560583c9"
+    },
+    {
+      "relative": "source/updater/catalog.py",
+      "bytes": 13903,
+      "sha256": "5b28e6656e93312a4cfdd93b98be5cb80f71cc235161c922c03b2b65f5ee3464"
+    },
+    {
+      "relative": "source/updater/channel.py",
+      "bytes": 826,
+      "sha256": "455ca0db29e0c074fa6fbe648a00cd2deeb8ea3df587c5d44967300b5098f3aa"
+    },
+    {
+      "relative": "source/updater/core.py",
+      "bytes": 82023,
+      "sha256": "99ce13ef8572c1278b4d51716e4f2b0241aabf099a934aa53be5d17affda58ee"
+    },
+    {
+      "relative": "source/updater/fresh_install.py",
+      "bytes": 21193,
+      "sha256": "7cc8af461592a721037012eed1faf25d8625c0633e25662d41063df682cd7b3e"
+    },
+    {
+      "relative": "source/updater/launcher_targets.py",
+      "bytes": 3311,
+      "sha256": "cdf93134662e09a470ec47171c17ee5daaaacdc6650d47f92585d38c8ae4c70b"
+    },
+    {
+      "relative": "source/updater/origin.py",
+      "bytes": 9524,
+      "sha256": "c451de3a17f9571b0a6590be2458e89ff93b3c23f58b52f329d7adafa7d3d924"
+    },
+    {
+      "relative": "source/updater/package_first_install.py",
+      "bytes": 12207,
+      "sha256": "1508b23ef8caf0aa894ba756839c039a43bd7d7ebf9ff0679897d69cc142181b"
+    },
+    {
+      "relative": "source/updater/self_update.py",
+      "bytes": 47359,
+      "sha256": "a09920c42b357d192c1bb45c82149099782c010cd583cc7b638f8292c1a2a8d9"
+    },
+    {
+      "relative": "source/updater/tuf_channel.py",
+      "bytes": 15911,
+      "sha256": "e5498ddc69d1dc9359e765bf447c7ee40924e8cfa75fda4b4a27cc16880186bb"
+    },
+    {
+      "relative": "policy.json",
+      "bytes": 3010,
+      "sha256": "95d5a3d7290c565a1c3c24dddd8986b90906b69c3fc227816122238b019d66be"
+    },
+    {
+      "relative": "policy_engine.py",
+      "bytes": 5104,
+      "sha256": "6f42beb520f7c70691a195351f5932e8a0cfb47194c2a8fef835eb92cbb04925"
+    },
+    {
+      "relative": "run_hosted.py",
+      "bytes": 11318,
+      "sha256": "3960245d4eace1300871da395f7dedd568573dc36fbda458add63a500f0f5f00"
+    },
+    {
+      "relative": "requirements.lock",
+      "bytes": 1462,
+      "sha256": "46d61e04e467cca4bac9c22d758899d215bbeaa70f78c5c32c5a2a785bbba690"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+name: Aeroneus read-only Linux timestamp smoke
+"on":
+  push:
+    branches:
+      - aeroneus-timestamp-smoke01
+permissions:
+  contents: read
+jobs:
+  smoke:
+    if: >-
+      github.event_name == 'push' &&
+      github.repository == 'thetotaladdiction-arch/stellar-blade-control-panel' &&
+      github.event.repository.fork == false &&
+      github.event.deleted == false &&
+      github.ref == 'refs/heads/aeroneus-timestamp-smoke01'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - id: source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # carried reviewed pin
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 1
+          submodules: false
+      - name: Verify actual pushed checkout
+        shell: bash
+        run: |
+          [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test '${{ steps.source.outputs.commit }}' = "$GITHUB_SHA"
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # carried reviewed pin
+        with:
+          python-version: '3.14.0'
+          architecture: x64
+      - name: Install exact hash-locked public wheels
+        run: python -I -m pip install --disable-pip-version-check --no-input --no-deps --require-hashes --only-binary=:all: -r automation/timestamp-publisher/requirements.lock
+      - name: Existing twelve public dummy-key controls
+        run: python -I -B automation/timestamp-publisher/test_online.py
+      - name: Actual public ref and eleven-file module smoke
+        run: python -I -B automation/timestamp-publisher/linux_smoke.py
