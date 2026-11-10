@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "repository": "thetotaladdiction-arch/stellar-blade-control-panel",
+  "default_branch": "source-v2.6.11",
+  "metadata_ref": "refs/heads/aeroneus-updates",
+  "trusted_root_sha256": "96ebcfda9215c29431d5b2c5f510238fb3dada60ba89ca75bfabc72a549e6ce1",
+  "timestamp_key_id": "913fc2f54b0ca535969f9b4d946b7d093e436d4ab6e00a3d8c52e1b93380909c",
+  "inner_public_keys_hex": {
+    "48df0fbd7451efb332ff1f5d808ae55f3bc215df42960e80cd46ddf91e33bb92": "ddfa9c227e920c8124d2904dde011fa1ee3eaddd50e4f7b56ed2a8ce0ee30245"
+  },
+  "fixed_role_versions": {
+    "root": 1,
+    "targets": 3,
+    "snapshot": 3
+  },
+  "minimum_timestamp_version": 5,
+  "minimum_ledger_sequence": 4,
+  "expected_files": [
+    "metadata/1.root.json",
+    "metadata/1.snapshot.json",
+    "metadata/1.targets.json",
+    "metadata/2.snapshot.json",
+    "metadata/2.targets.json",
+    "metadata/3.snapshot.json",
+    "metadata/3.targets.json",
+    "metadata/root.json",
+    "metadata/timestamp.json",
+    "public-ledger.json",
+    "targets/11e5e720d28921d732b0817c392fc4155ac14bb3570c8d4b812aebd74e6eb8b4.launcher-0.1.1-stable.json",
+    "targets/82313f52c5c1a4923ea4afde229660944a1a91f0e6a1c3dd8de142e7ffe1f435.stellar-blade-install-stable.json",
+    "targets/b14738d8c84865e21b9ef9437afa0c4d63e1cc2d702fdae74bd2c0ddb3585201.catalog-stable.json"
+  ],
+  "unchanged_files": [
+    {
+      "path": "metadata/1.root.json",
+      "size": 2756,
+      "sha256": "96ebcfda9215c29431d5b2c5f510238fb3dada60ba89ca75bfabc72a549e6ce1",
+      "git_blob": "075fe82631017783a1eb956d8688e8febc9b2dff",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "metadata/1.snapshot.json",
+      "size": 467,
+      "sha256": "bf4fe54918243e946adda31649875d0df257a7c50027e116f355831ae3041663",
+      "git_blob": "92d0caeba7cb6650fb92bbad55db0fab2da9303e",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "metadata/1.targets.json",
+      "size": 603,
+      "sha256": "6e351643696d8a453b558c020d8d6a7ea13f174af3bb21abb68861e00ea1efe5",
+      "git_blob": "168f7c0ebd3d0d7a1ea34ec35b2f3fc1d3b8adfb",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "metadata/2.snapshot.json",
+      "size": 467,
+      "sha256": "b6109c6d7bebf49eb4bcbbf9d20ce5aaf07521d7190a20c7a47148a9f825568b",
+      "git_blob": "4313b5eb887e74026c77aac185d1524fd96232bb",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "metadata/2.targets.json",
+      "size": 737,
+      "sha256": "c49d55ba018e437c1902a25eb2e63a096285132103ef511b084aebd6828ec5e1",
+      "git_blob": "eaeba6b5606a10b71dbfe28d1d050033f84dd630",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "metadata/3.snapshot.json",
+      "size": 467,
+      "sha256": "a0912e398fe43caab0993708ad190bb7841d731a42df085b100cd9e7fd1b7342",
+      "git_blob": "4a5f6027e170a0028c39e6e6feb992bac527fa8c",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "metadata/3.targets.json",
+      "size": 737,
+      "sha256": "2264c244eacdd941d236a892618bf2aee4840519370cf762f82711657322c50e",
+      "git_blob": "8a2c6db3a4fe0756ba208d20bac4bb3a8d34f025",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "metadata/root.json",
+      "size": 2756,
+      "sha256": "96ebcfda9215c29431d5b2c5f510238fb3dada60ba89ca75bfabc72a549e6ce1",
+      "git_blob": "075fe82631017783a1eb956d8688e8febc9b2dff",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "targets/11e5e720d28921d732b0817c392fc4155ac14bb3570c8d4b812aebd74e6eb8b4.launcher-0.1.1-stable.json",
+      "size": 132493,
+      "sha256": "11e5e720d28921d732b0817c392fc4155ac14bb3570c8d4b812aebd74e6eb8b4",
+      "git_blob": "c6cbcfaaabb580c7354b7b603c2aefa01a82c2bc",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "targets/82313f52c5c1a4923ea4afde229660944a1a91f0e6a1c3dd8de142e7ffe1f435.stellar-blade-install-stable.json",
+      "size": 9609,
+      "sha256": "82313f52c5c1a4923ea4afde229660944a1a91f0e6a1c3dd8de142e7ffe1f435",
+      "git_blob": "6c9488f4b1ea5c34271738521e451b57c3f6609f",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    },
+    {
+      "path": "targets/b14738d8c84865e21b9ef9437afa0c4d63e1cc2d702fdae74bd2c0ddb3585201.catalog-stable.json",
+      "size": 356,
+      "sha256": "b14738d8c84865e21b9ef9437afa0c4d63e1cc2d702fdae74bd2c0ddb3585201",
+      "git_blob": "a36b8b569194f199c58abbfaa38ab8a6691fb7f8",
+      "http_date": "Tue, 10 Nov 2026 05:16:41 GMT"
+    }
+  ],
+  "due_seconds": 10800,
+  "lifetime_seconds": 21600,
+  "hosting_consent_record": null
+}

@@ -1,0 +1,121 @@
+name: Aeroneus timestamp maintenance
+"on":
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: aeroneus-timestamp-publisher
+  cancel-in-progress: false
+jobs:
+  timestamp:
+    if: >-
+      github.event_name == 'schedule' &&
+      github.repository == 'thetotaladdiction-arch/stellar-blade-control-panel' &&
+      github.event.repository.fork == false &&
+      github.event.repository.default_branch == 'source-v2.6.11' &&
+      github.ref == 'refs/heads/source-v2.6.11' &&
+      vars.PUBLISHER_REVIEWED_SOURCE_SHA != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    environment: timestamp-publisher
+    permissions:
+      contents: write
+    env:
+      PUBLISHER_REVIEWED_SOURCE_SHA: ${{ vars.PUBLISHER_REVIEWED_SOURCE_SHA }}
+    steps:
+      - name: Require an immutable reviewed commit
+        shell: bash
+        run: |
+          [[ "$PUBLISHER_REVIEWED_SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]
+      - id: source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ vars.PUBLISHER_REVIEWED_SOURCE_SHA }}
+          persist-credentials: false
+          fetch-depth: 1
+          submodules: false
+      - name: Check actual reviewed checkout before running its files
+        shell: bash
+        env:
+          ACTUAL_CHECKOUT_SHA: ${{ steps.source.outputs.commit }}
+        run: |
+          test "$ACTUAL_CHECKOUT_SHA" = "$PUBLISHER_REVIEWED_SOURCE_SHA"
+          test "$(git rev-parse HEAD)" = "$PUBLISHER_REVIEWED_SOURCE_SHA"
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.14.0'
+      - name: Install exact hash-locked public dependencies
+        run: >-
+          python -I -m pip install --disable-pip-version-check --no-input --no-deps --require-hashes --only-binary=:all: -r automation/timestamp-publisher/requirements.lock
+      - name: Focused test-key-only controls
+        run: python -I -B automation/timestamp-publisher/test_online.py
+      - name: Current generation and deadline controls
+        run: python -I -B automation/timestamp-publisher/test_successor.py
+      - name: Observe actual public state without private input
+        id: public
+        env:
+          CHECKED_OUT_PUBLISHER_SHA: ${{ steps.source.outputs.commit }}
+        run: python -I -B automation/timestamp-publisher/run_hosted.py check
+      - name: Renew only when due with separately consented timestamp key
+        if: steps.public.outputs.decision == 'RENEW_DUE' && vars.TIMESTAMP_KEY_HOSTING_APPROVED == 'true' && runner.debug != '1'
+        env:
+          CHECKED_OUT_PUBLISHER_SHA: ${{ steps.source.outputs.commit }}
+          TIMESTAMP_KEY_HOSTING_APPROVED: ${{ vars.TIMESTAMP_KEY_HOSTING_APPROVED }}
+          AERONEUS_TIMESTAMP_PEM: ${{ secrets.AERONEUS_TIMESTAMP_PEM }}
+          AERONEUS_PUSH_TOKEN: ${{ github.token }}
+        run: python -I -B automation/timestamp-publisher/run_hosted.py publish
+      - name: Report unconfigured custody honestly
+        if: steps.public.outputs.decision == 'RENEW_DUE' && vars.TIMESTAMP_KEY_HOSTING_APPROVED != 'true'
+        run: |
+          echo 'Timestamp is due; key hosting is not enabled. No signing was attempted.'
+          exit 1
+  dry-run:
+    if: >-
+      github.event_name == 'workflow_dispatch' &&
+      github.repository == 'thetotaladdiction-arch/stellar-blade-control-panel' &&
+      github.event.repository.fork == false &&
+      github.event.repository.default_branch == 'source-v2.6.11' &&
+      github.ref == 'refs/heads/source-v2.6.11' &&
+      vars.PUBLISHER_REVIEWED_SOURCE_SHA != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: read
+    env:
+      PUBLISHER_REVIEWED_SOURCE_SHA: ${{ vars.PUBLISHER_REVIEWED_SOURCE_SHA }}
+    steps:
+      - name: Require an immutable reviewed commit
+        shell: bash
+        run: |
+          [[ "$PUBLISHER_REVIEWED_SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]
+      - id: source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ vars.PUBLISHER_REVIEWED_SOURCE_SHA }}
+          persist-credentials: false
+          fetch-depth: 1
+          submodules: false
+      - name: Check actual reviewed checkout before running its files
+        shell: bash
+        env:
+          ACTUAL_CHECKOUT_SHA: ${{ steps.source.outputs.commit }}
+        run: |
+          test "$ACTUAL_CHECKOUT_SHA" = "$PUBLISHER_REVIEWED_SOURCE_SHA"
+          test "$(git rev-parse HEAD)" = "$PUBLISHER_REVIEWED_SOURCE_SHA"
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.14.0'
+      - name: Install exact hash-locked public dependencies
+        run: >-
+          python -I -m pip install --disable-pip-version-check --no-input --no-deps --require-hashes --only-binary=:all: -r automation/timestamp-publisher/requirements.lock
+      - name: Focused test-key-only controls
+        run: python -I -B automation/timestamp-publisher/test_online.py
+      - name: Current generation and deadline controls
+        run: python -I -B automation/timestamp-publisher/test_successor.py
+      - name: Observe actual public state without private input
+        id: public
+        env:
+          CHECKED_OUT_PUBLISHER_SHA: ${{ steps.source.outputs.commit }}
+        run: python -I -B automation/timestamp-publisher/run_hosted.py check

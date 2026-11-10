@@ -1,0 +1,180 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "relative": "policy.json",
+      "bytes": 4640,
+      "sha256": "f3b69c62d14d21d5c62c6430416a8582f839d92a23b1e2216d9618dbafd16d48"
+    },
+    {
+      "relative": "policy_engine.py",
+      "bytes": 5248,
+      "sha256": "283e119514bec0c67133b10200f6e87b35d29539b0205b7ae876c2e3d6bfdd79"
+    },
+    {
+      "relative": "requirements.lock",
+      "bytes": 1462,
+      "sha256": "46d61e04e467cca4bac9c22d758899d215bbeaa70f78c5c32c5a2a785bbba690"
+    },
+    {
+      "relative": "run_hosted.py",
+      "bytes": 11404,
+      "sha256": "fc5c8070eaf7614fc567647f70138ed03c7ffd8b0a35989cba5108e3490e81c8"
+    },
+    {
+      "relative": "source/publisher/__init__.py",
+      "bytes": 298,
+      "sha256": "2defec38104030a0e3c010a99b7f4e36ff018745f1bbed863465f0be32d7000a"
+    },
+    {
+      "relative": "source/publisher/git_operator.py",
+      "bytes": 56362,
+      "sha256": "8c6f8847ee0e2851077210fbf4448630a4cf6526518fbbc206ae621a12b9b730"
+    },
+    {
+      "relative": "source/publisher/public_state.py",
+      "bytes": 6932,
+      "sha256": "0d985ce7448beead4ad031c33e25832af8f9edfbd670f5e0aa4d47111dcb7eb3"
+    },
+    {
+      "relative": "source/publisher/renewal.py",
+      "bytes": 10651,
+      "sha256": "8e9c215905e91cddee7b51e2c1bd702577004a9c73ebdecd68ce23f1c41294d3"
+    },
+    {
+      "relative": "source/publisher/repository.py",
+      "bytes": 22739,
+      "sha256": "be606f8232588428cea7418d9d1da95c1a657612932aedc6c2bdad09a03528be"
+    },
+    {
+      "relative": "source/publisher/staging.py",
+      "bytes": 28245,
+      "sha256": "e535e44e2437bdfdd37f62c7f137457037b43f943db82b27fb6f455977a430d5"
+    },
+    {
+      "relative": "source/updater/__init__.py",
+      "bytes": 1299,
+      "sha256": "eca2d4f587c9c6deb7dac08d8f50deff19c85d42bfe09b7aca4239d1560583c9"
+    },
+    {
+      "relative": "source/updater/catalog.py",
+      "bytes": 13903,
+      "sha256": "5b28e6656e93312a4cfdd93b98be5cb80f71cc235161c922c03b2b65f5ee3464"
+    },
+    {
+      "relative": "source/updater/channel.py",
+      "bytes": 826,
+      "sha256": "455ca0db29e0c074fa6fbe648a00cd2deeb8ea3df587c5d44967300b5098f3aa"
+    },
+    {
+      "relative": "source/updater/core.py",
+      "bytes": 82023,
+      "sha256": "99ce13ef8572c1278b4d51716e4f2b0241aabf099a934aa53be5d17affda58ee"
+    },
+    {
+      "relative": "source/updater/fresh_install.py",
+      "bytes": 21193,
+      "sha256": "7cc8af461592a721037012eed1faf25d8625c0633e25662d41063df682cd7b3e"
+    },
+    {
+      "relative": "source/updater/launcher_targets.py",
+      "bytes": 3311,
+      "sha256": "cdf93134662e09a470ec47171c17ee5daaaacdc6650d47f92585d38c8ae4c70b"
+    },
+    {
+      "relative": "source/updater/origin.py",
+      "bytes": 9524,
+      "sha256": "c451de3a17f9571b0a6590be2458e89ff93b3c23f58b52f329d7adafa7d3d924"
+    },
+    {
+      "relative": "source/updater/package_first_install.py",
+      "bytes": 12207,
+      "sha256": "1508b23ef8caf0aa894ba756839c039a43bd7d7ebf9ff0679897d69cc142181b"
+    },
+    {
+      "relative": "source/updater/self_update.py",
+      "bytes": 47359,
+      "sha256": "a09920c42b357d192c1bb45c82149099782c010cd583cc7b638f8292c1a2a8d9"
+    },
+    {
+      "relative": "source/updater/tuf_channel.py",
+      "bytes": 15911,
+      "sha256": "e5498ddc69d1dc9359e765bf447c7ee40924e8cfa75fda4b4a27cc16880186bb"
+    },
+    {
+      "relative": "test_online.py",
+      "bytes": 8547,
+      "sha256": "bffae654edf6cffeb1264c4f55c75c85dbd3195f60383e2aa6361251f42eebfd"
+    },
+    {
+      "relative": "test_successor.py",
+      "bytes": 9701,
+      "sha256": "11a00acf4985d66d368d7a597a0ae858569b7725e4fe5a68b01cbf154226759e"
+    },
+    {
+      "relative": "testdata/published13/metadata/1.root.json",
+      "bytes": 2756,
+      "sha256": "96ebcfda9215c29431d5b2c5f510238fb3dada60ba89ca75bfabc72a549e6ce1"
+    },
+    {
+      "relative": "testdata/published13/metadata/1.snapshot.json",
+      "bytes": 467,
+      "sha256": "bf4fe54918243e946adda31649875d0df257a7c50027e116f355831ae3041663"
+    },
+    {
+      "relative": "testdata/published13/metadata/1.targets.json",
+      "bytes": 603,
+      "sha256": "6e351643696d8a453b558c020d8d6a7ea13f174af3bb21abb68861e00ea1efe5"
+    },
+    {
+      "relative": "testdata/published13/metadata/2.snapshot.json",
+      "bytes": 467,
+      "sha256": "b6109c6d7bebf49eb4bcbbf9d20ce5aaf07521d7190a20c7a47148a9f825568b"
+    },
+    {
+      "relative": "testdata/published13/metadata/2.targets.json",
+      "bytes": 737,
+      "sha256": "c49d55ba018e437c1902a25eb2e63a096285132103ef511b084aebd6828ec5e1"
+    },
+    {
+      "relative": "testdata/published13/metadata/3.snapshot.json",
+      "bytes": 467,
+      "sha256": "a0912e398fe43caab0993708ad190bb7841d731a42df085b100cd9e7fd1b7342"
+    },
+    {
+      "relative": "testdata/published13/metadata/3.targets.json",
+      "bytes": 737,
+      "sha256": "2264c244eacdd941d236a892618bf2aee4840519370cf762f82711657322c50e"
+    },
+    {
+      "relative": "testdata/published13/metadata/root.json",
+      "bytes": 2756,
+      "sha256": "96ebcfda9215c29431d5b2c5f510238fb3dada60ba89ca75bfabc72a549e6ce1"
+    },
+    {
+      "relative": "testdata/published13/metadata/timestamp.json",
+      "bytes": 469,
+      "sha256": "0136bfc304e841e71924e9db1e7fd4b1c37ea0cf42990b013bf04e3193f8115f"
+    },
+    {
+      "relative": "testdata/published13/public-ledger.json",
+      "bytes": 574,
+      "sha256": "2d62e7c5dd8f70f6cb645ff8ef3ddd396bc1c9ae983df41aa82f1b90fd9b8b22"
+    },
+    {
+      "relative": "testdata/published13/targets/11e5e720d28921d732b0817c392fc4155ac14bb3570c8d4b812aebd74e6eb8b4.launcher-0.1.1-stable.json",
+      "bytes": 132493,
+      "sha256": "11e5e720d28921d732b0817c392fc4155ac14bb3570c8d4b812aebd74e6eb8b4"
+    },
+    {
+      "relative": "testdata/published13/targets/82313f52c5c1a4923ea4afde229660944a1a91f0e6a1c3dd8de142e7ffe1f435.stellar-blade-install-stable.json",
+      "bytes": 9609,
+      "sha256": "82313f52c5c1a4923ea4afde229660944a1a91f0e6a1c3dd8de142e7ffe1f435"
+    },
+    {
+      "relative": "testdata/published13/targets/b14738d8c84865e21b9ef9437afa0c4d63e1cc2d702fdae74bd2c0ddb3585201.catalog-stable.json",
+      "bytes": 356,
+      "sha256": "b14738d8c84865e21b9ef9437afa0c4d63e1cc2d702fdae74bd2c0ddb3585201"
+    }
+  ]
+}
